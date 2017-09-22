@@ -1,8 +1,8 @@
 package frame.frameElements.menuBar.menu;
 
-import frame.frameElements.elementsForConnectionToServer.CheckMenuItem;
-import frame.frameElements.elementsForConnectionToServer.ConnectionMenuItem;
-import frame.frameElements.elementsForConnectionToServer.DisconnectionMenuItem;
+import frame.frameElements.elementsForConnectionToServer.menuItems.CheckMenuItem;
+import frame.frameElements.elementsForConnectionToServer.menuItems.ConnectionMenuItem;
+import frame.frameElements.elementsForConnectionToServer.menuItems.DisconnectionMenuItem;
 
 import javax.swing.*;
 
@@ -24,19 +24,22 @@ public class FrMenu {
     }
 
     private void addConnectionMenuItemToMenu() {
-        ConnectionMenuItem menuItem = new ConnectionMenuItem();
+        final String NAME = "Connection to server...";
+        ConnectionMenuItem menuItem = new ConnectionMenuItem(NAME);
         JMenuItem connectionMenuItem = menuItem.getConnectionMenuItem();
         menu.add(connectionMenuItem);
     }
 
     private void addDisconnectionMenuItemToMenu() {
-        DisconnectionMenuItem menuItem = new DisconnectionMenuItem();
+        final String NAME = "Disconnection from server...";
+        DisconnectionMenuItem menuItem = new DisconnectionMenuItem(NAME);
         JMenuItem disconnectionMenuItem = menuItem.getDisconnectionMenuItem();
         menu.add(disconnectionMenuItem);
     }
 
     private void addCheckMenuItemToMenu() {
-        CheckMenuItem menuItem = new CheckMenuItem();
+        final String NAME = "Check connection status...";
+        CheckMenuItem menuItem = new CheckMenuItem(NAME);
         JMenuItem checkMenuItem = menuItem.getCheckMenuItem();
         menu.add(checkMenuItem);
     }
