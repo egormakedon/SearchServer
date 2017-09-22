@@ -1,4 +1,4 @@
-package frame.frameElements;
+package frame.frameElements.menuBar;
 
 import javax.swing.*;
 import java.awt.*;
