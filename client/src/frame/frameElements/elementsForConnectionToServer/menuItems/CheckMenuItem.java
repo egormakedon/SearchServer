@@ -1,7 +1,6 @@
 package frame.frameElements.elementsForConnectionToServer.menuItems;
 
 import frame.frameElements.elementsForConnectionToServer.dialog.CheckDialog;
-import frame.frameElements.elementsForConnectionToServer.dialog.ConnectionDialog;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
