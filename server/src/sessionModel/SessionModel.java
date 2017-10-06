@@ -3,10 +3,11 @@ package sessionModel;
 import java.io.File;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.List;
 
 public class SessionModel {
     private final File SESSION_DIR;
-    private ArrayList<Socket> socketList = new ArrayList<>();
+    private List<Socket> socketList = new ArrayList<>();
 
     public SessionModel() {
         SESSION_DIR = new File(System.getProperty("user.dir") + "/session");
