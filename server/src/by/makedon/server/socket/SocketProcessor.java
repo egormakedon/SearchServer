@@ -1,37 +1,26 @@
 package by.makedon.server.socket;
 
-import java.io.IOException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 
 public class SocketProcessor implements Runnable {
-    private InputStream inS = null;
-    private OutputStream outS = null;
-    private Socket socket = null;
+    private InputStream is;
+    private OutputStream os;
+    private Socket socket;
+    static Logger logger = LogManager.getLogger(SocketProcessor.class);
 
-    private SessionModel sessionModel = null;
-
-    SocketProcessor(Socket socket, SessionModel sessionModel) throws IOException {
+    public SocketProcessor(Socket socket) {
         this.socket = socket;
-        this.inS = socket.getInputStream();
-        this.outS = socket.getOutputStream();
-
-        this.sessionModel = sessionModel;
     }
 
     @Override
     public void run() {
-        if (!checkSocketSessionOnExist(socket)) {
-            addSocketToList(socket);
+        while(true) {
+
         }
-    }
-
-    private boolean checkSocketSessionOnExist(Socket socket) {
-        return sessionModel.checkSocketExistInList(socket);
-    }
-
-    private void addSocketToList(Socket socket) {
-        sessionModel.addSocketToList(socket);
     }
 }

@@ -1,6 +1,6 @@
 package by.makedon.server.server;
 
-import by.makedon.server.exception.SocketException;
+import by.makedon.server.exception.ServerException;
 import by.makedon.server.socket.SocketProcessor;
 import by.makedon.server.socket.SocketStore;
 import by.makedon.server.socket.SocketStoreManager;
@@ -17,14 +17,14 @@ public class SearchServer {
     private ServerSocket ss;
     private boolean isServerRun;
     private SocketStore socketStore;
-    static Logger logger = LogManager.getLogger();
+    static Logger logger = LogManager.getLogger(SearchServer.class);
 
     {
         PORT = 9000;
         socketStore = SocketStore.getInstance();
     }
 
-    public void runServer() throws SocketException {
+    public void runServer() throws ServerException {
         if (isServerRun) {
             logger.log(Level.INFO,"server has already run");
             return;
@@ -35,7 +35,7 @@ public class SearchServer {
             ss = new ServerSocket(PORT);
             logger.log(Level.INFO, "created new ServerSocket");
         } catch (IOException e) {
-            throw new SocketException("ServerSocket io exception", e);
+            throw new ServerException("ServerSocket io exception", e);
         }
 
         try {
@@ -46,11 +46,11 @@ public class SearchServer {
                 new Thread(new SocketProcessor(socket)).run();
             }
         } catch (IOException e) {
-            throw new SocketException("Socket io exception", e);
+            throw new ServerException("Socket io exception", e);
         }
     }
 
-    public void stopServer() throws SocketException {
+    public void stopServer() throws ServerException {
         if (!isServerRun) {
             logger.log(Level.INFO,"server has already stopped");
             return;
@@ -58,13 +58,14 @@ public class SearchServer {
         isServerRun = false;
 
         SocketStoreManager socketStoreManager = new SocketStoreManager();
-        socketStoreManager.clearStore(socketStore.getSocketList());
+        socketStoreManager.closeSockets(socketStore);
+        socketStoreManager.clearStore(socketStore);
 
         try {
             ss.close();
             ss = null;
         } catch (IOException e) {
-            throw new SocketException("ServerSocket io exception", e);
+            throw new ServerException("ServerSocket io exception", e);
         }
     }
 }
