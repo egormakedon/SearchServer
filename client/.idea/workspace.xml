@@ -12,38 +12,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CheckMenuItem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/makedon/client/menuItem/CheckMenuItem.java">
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/by/makedon/client/model/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="432">
+              <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log4j2.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/log4j2.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="16" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/makedon/client/controller/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="56" column="37" lean-forward="false" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CheckDialog.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/by/makedon/client/dialog/CheckDialog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1759#1760#0" expanded="true" />
-                <element signature="e#1801#1802#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -92,9 +78,7 @@
         <option value="$PROJECT_DIR$/src/by/makedon/client/frame/searchElements/PanelForSearchElements.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/client/frame/searchElements/SearchButton.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/client/frame/searchElements/SearchLine.java" />
-        <option value="$PROJECT_DIR$/src/by/makedon/client/main/Main.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/client/frame/informationElements/InformationPanel.java" />
-        <option value="$PROJECT_DIR$/src/log4j2.xml" />
         <option value="$PROJECT_DIR$/src/by/makedon/client/exception/WrongConnectionExc.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/client/clientController/Controller.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/client/validation/InputValidation.java" />
@@ -112,10 +96,12 @@
         <option value="$PROJECT_DIR$/src/by/makedon/client/dialog/ConnectionDialog.java" />
         <option value="/usr/lib/jvm/java-8-oracle/src.zip!/java/net/InetAddressImpl.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/client/dialog/DisconnectionDialog.java" />
-        <option value="$PROJECT_DIR$/src/by/makedon/client/model/Client.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/client/menuItem/CheckMenuItem.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/client/controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/client/dialog/CheckDialog.java" />
+        <option value="$PROJECT_DIR$/src/log4j2.xml" />
+        <option value="$PROJECT_DIR$/src/by/makedon/client/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/by/makedon/client/model/Client.java" />
       </list>
     </option>
   </component>
@@ -125,11 +111,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="873" />
-    <option name="y" value="4" />
-    <option name="width" value="1258" />
-    <option name="height" value="1035" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="y" value="24" />
+    <option name="width" value="960" />
+    <option name="height" value="1007" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -146,10 +131,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -173,31 +155,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="dialog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="menuItem" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -351,12 +315,17 @@
       <workItem from="1507262397925" duration="3601000" />
       <workItem from="1507285919404" duration="2524000" />
       <workItem from="1507288455405" duration="14876000" />
-      <workItem from="1507677990963" duration="21932000" />
+      <workItem from="1507677990963" duration="22005000" />
+      <workItem from="1508025289103" duration="1655000" />
+      <workItem from="1508285363829" duration="39000" />
+      <workItem from="1508523076179" duration="598000" />
+      <workItem from="1508635829750" duration="427000" />
+      <workItem from="1508911007815" duration="3057000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84563000" />
+    <option name="totallyTimeSpent" value="90412000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -368,25 +337,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-4" width="1920" height="1035" extended-state="6" />
+    <frame x="0" y="24" width="960" height="1007" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11123348" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19273128" sideWeight="0.50213444" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18832599" sideWeight="0.49786553" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18832599" sideWeight="0.49786553" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24813233" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5142232" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -397,8 +364,10 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11123348" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="124" y="153" width="1736" height="856" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,128 +385,23 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/frame/ElementManager.java" />
     <entry file="file://$PROJECT_DIR$/src/frame/menuBar/MBar.java" />
-    <entry file="file://$PROJECT_DIR$/src/frame/searchElements/SearchLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="75" column="35" lean-forward="false" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/searchElements/SearchButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/searchElements/PanelForSearchElements.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/informationElements/InformationPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frame/searchElements/SearchLine.java" />
+    <entry file="file://$PROJECT_DIR$/src/frame/searchElements/SearchButton.java" />
+    <entry file="file://$PROJECT_DIR$/src/frame/searchElements/PanelForSearchElements.java" />
+    <entry file="file://$PROJECT_DIR$/src/frame/informationElements/InformationPanel.java" />
     <entry file="file://$PROJECT_DIR$/src/frame/menuElements/menuItems/MenuItem.java" />
-    <entry file="file://$PROJECT_DIR$/src/frame/menuItems/ExitMenuItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/menuItems/CheckMenuItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dialog/DisconnectionDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/menuItems/DisconnectionMenuItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="27" column="42" lean-forward="false" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/MenuBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/MainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="52" column="37" lean-forward="false" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="34" column="41" lean-forward="false" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frame/menuItems/ConnectionMenuItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dialog/CheckDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dialog/Dialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dialog/ConnectionDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="67" column="41" lean-forward="false" selection-start-line="67" selection-start-column="41" selection-end-line="67" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frame/menuItems/ExitMenuItem.java" />
+    <entry file="file://$PROJECT_DIR$/src/frame/menuItems/CheckMenuItem.java" />
+    <entry file="file://$PROJECT_DIR$/src/dialog/DisconnectionDialog.java" />
+    <entry file="file://$PROJECT_DIR$/src/frame/menuItems/DisconnectionMenuItem.java" />
+    <entry file="file://$PROJECT_DIR$/src/frame/MenuBar.java" />
+    <entry file="file://$PROJECT_DIR$/src/frame/MainFrame.java" />
+    <entry file="file://$PROJECT_DIR$/src/frame/Menu.java" />
+    <entry file="file://$PROJECT_DIR$/src/frame/menuItems/ConnectionMenuItem.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/dialog/CheckDialog.java" />
+    <entry file="file://$PROJECT_DIR$/src/dialog/Dialog.java" />
+    <entry file="file://$PROJECT_DIR$/src/dialog/ConnectionDialog.java" />
     <entry file="file://$PROJECT_DIR$/client.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -546,34 +410,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resource/log4j.xml" />
-    <entry file="file://$PROJECT_DIR$/src/clientModel/ServerData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/clientModel/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/clientController/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/clientModel/ServerData.java" />
+    <entry file="file://$PROJECT_DIR$/src/clientModel/Client.java" />
+    <entry file="file://$PROJECT_DIR$/src/clientController/Controller.java" />
     <entry file="file://$PROJECT_DIR$/src/by/makedon/client/menuItem/ConnectionMenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -581,9 +424,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -591,9 +431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -601,9 +438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -611,9 +445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -621,17 +452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/makedon/client/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -647,7 +467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -655,7 +474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -663,18 +481,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/makedon/client/exception/WrongConnectionException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding>
-            <element signature="e#403#404#0" expanded="false" />
-            <element signature="e#435#436#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -682,9 +488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -692,11 +495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
           <caret line="33" column="60" lean-forward="false" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#411#412#0" expanded="false" />
-            <element signature="e#455#456#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -712,15 +510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="48" column="43" lean-forward="false" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/log4j2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="65" lean-forward="false" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -728,7 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="242" column="11" lean-forward="false" selection-start-line="242" selection-start-column="11" selection-end-line="242" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -736,7 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="45" column="50" lean-forward="false" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,9 +539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="523">
           <caret line="74" column="13" lean-forward="true" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -765,31 +549,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/makedon/client/model/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/makedon/client/dialog/DisconnectionDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1">
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/makedon/client/menuItem/CheckMenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
+        <state relative-caret-position="18">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -798,19 +571,50 @@
         <state relative-caret-position="343">
           <caret line="56" column="37" lean-forward="false" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/makedon/client/dialog/CheckDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        <state relative-caret-position="163">
+          <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/makedon/client/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/makedon/client/exception/WrongConnectionException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="e#302#303#0" expanded="false" />
+            <element signature="e#343#344#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/log4j2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/makedon/client/model/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1759#1760#0" expanded="true" />
-            <element signature="e#1801#1802#0" expanded="true" />
           </folding>
         </state>
       </provider>

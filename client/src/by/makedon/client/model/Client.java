@@ -30,7 +30,7 @@ public class Client {
 
     public void close() {
         try {
-            clientSocket.close();
+            if (clientSocket != null) clientSocket.close();
         } catch (IOException e) {
             logger.log(Level.INFO, "client socket closed");
         }

@@ -30,3 +30,6 @@
 2017-10-11 19:01:16.166 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.DisconnectionDialog - Client haven't connected yet
 2017-10-11 19:01:16.320 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.DisconnectionDialog - Client haven't connected yet
 2017-10-11 19:01:16.476 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.DisconnectionDialog - Client haven't connected yet
+2017-10-15 20:10:12.945 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: qweqw
+2017-10-15 20:11:13.254 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: adqdq
+2017-10-15 20:13:47.149 [main] INFO  by.makedon.client.main.Main - kek

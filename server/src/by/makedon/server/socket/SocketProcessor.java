@@ -1,6 +1,4 @@
-package server;
-
-import sessionModel.SessionModel;
+package by.makedon.server.socket;
 
 import java.io.IOException;
 import java.io.InputStream;
