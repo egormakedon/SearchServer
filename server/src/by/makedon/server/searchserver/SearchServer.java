@@ -1,4 +1,4 @@
-package by.makedon.server.server;
+package by.makedon.server.searchserver;
 
 import by.makedon.server.exception.ServerException;
 import by.makedon.server.socket.SocketProcessor;
@@ -26,7 +26,7 @@ public class SearchServer {
 
     public void runServer() throws ServerException {
         if (isServerRun) {
-            logger.log(Level.INFO,"server has already run");
+            logger.log(Level.INFO,"searchserver has already run");
             return;
         }
 
@@ -52,7 +52,7 @@ public class SearchServer {
 
     public void stopServer() throws ServerException {
         if (!isServerRun) {
-            logger.log(Level.INFO,"server has already stopped");
+            logger.log(Level.INFO,"searchserver has already stopped");
             return;
         }
         isServerRun = false;
