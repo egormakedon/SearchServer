@@ -47,6 +47,12 @@ public class Frame {
         frameAction.setButton(frame, stopButton.getButton());
     }
 
+    public void show() {
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
+
     private void setSearchServerToButton() {
         runButton.setSearchServer(searchServer);
         stopButton.setSearchServer(searchServer);
@@ -55,11 +61,5 @@ public class Frame {
     private void setListenerToButton() {
         runButton.getButton().addActionListener(runButton);
         stopButton.getButton().addActionListener(stopButton);
-    }
-
-    public void show() {
-        frame.pack();
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
     }
 }

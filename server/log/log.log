@@ -1,3 +1,47 @@
 2017-10-29 02:39:06.702 [main] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
 2017-10-29 02:39:24.017 [main] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
 2017-10-29 02:56:43.133 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-10-29 03:03:24.621 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-10-29 03:04:06.632 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-10-29 03:05:14.547 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-10-29 03:07:39.104 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-10-29 03:07:48.060 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - searchserver has already stopped
+2017-10-29 03:07:51.912 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - searchserver has already stopped
+2017-10-29 03:07:53.007 [Thread-2] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-10-29 03:08:01.045 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - searchserver has already stopped
+2017-10-29 03:08:02.828 [Thread-3] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-10-29 03:08:18.867 [Thread-3] INFO  by.makedon.server.searchserver.SearchServer - new client /192.168.100.8 connected
+2017-10-29 03:08:53.976 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - searchserver has already stopped
+2017-10-29 03:09:23.497 [Thread-6] INFO  by.makedon.server.searchserver.SearchServer - searchserver has already run
+2017-10-29 03:09:31.569 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - searchserver has already stopped
+2017-10-29 03:09:33.584 [Thread-7] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-10-29 03:10:07.829 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-10-29 14:14:36.202 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-10-29 14:14:38.004 [Thread-2] INFO  by.makedon.server.searchserver.SearchServer - searchserver has already run
+2017-10-29 14:14:41.602 [Thread-3] INFO  by.makedon.server.searchserver.SearchServer - searchserver has already run
+2017-10-29 14:14:42.933 [Thread-4] INFO  by.makedon.server.searchserver.SearchServer - searchserver has already run
+2017-10-29 14:14:43.959 [Thread-5] INFO  by.makedon.server.searchserver.SearchServer - searchserver has already run
+2017-10-29 14:14:48.297 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - searchserver has already stopped
+2017-10-29 14:14:49.780 [Thread-6] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-10-29 14:32:29.540 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - searchserver was run
+2017-10-29 14:32:29.544 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-10-29 14:32:36.731 [Thread-2] INFO  by.makedon.server.searchserver.SearchServer - searchserver has already run
+2017-10-29 14:32:39.185 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - searchserver was stopped
+2017-10-29 14:32:39.188 [Thread-1] ERROR by.makedon.server.searchserver.SearchServer - by.makedon.server.exception.ServerException: Socket io exception
+2017-10-29 14:32:46.743 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - searchserver has already stopped
+2017-10-29 14:32:48.815 [Thread-3] INFO  by.makedon.server.searchserver.SearchServer - searchserver was run
+2017-10-29 14:32:48.816 [Thread-3] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-10-29 14:32:52.351 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - searchserver was stopped
+2017-10-29 14:32:52.352 [Thread-3] ERROR by.makedon.server.searchserver.SearchServer - by.makedon.server.exception.ServerException: Socket io exception
+2017-10-29 14:35:53.408 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - searchserver was run
+2017-10-29 14:35:53.413 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-10-29 14:35:54.228 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - searchserver was stopped
+2017-10-29 14:35:54.232 [Thread-1] ERROR by.makedon.server.searchserver.SearchServer - by.makedon.server.exception.ServerException: Socket io exception
+2017-10-29 14:37:00.789 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - searchserver was run
+2017-10-29 14:37:00.794 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-10-29 14:37:01.451 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - searchserver was stopped
+2017-10-29 14:37:01.455 [Thread-1] ERROR by.makedon.server.searchserver.SearchServer - by.makedon.server.exception.ServerException: Socket io exception111
+2017-10-29 14:37:16.805 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - searchserver was run
+2017-10-29 14:37:16.811 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-10-29 14:37:17.526 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - searchserver was stopped
+2017-10-29 14:37:17.529 [Thread-1] ERROR by.makedon.server.searchserver.SearchServer - by.makedon.server.exception.ServerException: Socket io exception

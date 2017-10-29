@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class SearchServer {
+public class SearchServer implements Runnable {
     private final int PORT;
     private ServerSocket ss;
     private boolean isServerRun;
@@ -24,29 +24,25 @@ public class SearchServer {
         socketStore = SocketStore.getInstance();
     }
 
-    public void runServer() throws ServerException {
+    @Override
+    public void run() {
         if (isServerRun) {
             logger.log(Level.INFO,"searchserver has already run");
             return;
         }
-
+        logger.log(Level.INFO, "searchserver was run");
         isServerRun = true;
+
         try {
-            ss = new ServerSocket(PORT);
-            logger.log(Level.INFO, "created new ServerSocket");
-        } catch (IOException e) {
-            throw new ServerException("ServerSocket io exception", e);
+            createServerSocket();
+        } catch (ServerException e) {
+            logger.log(Level.ERROR, e);
         }
 
         try {
-            while (isServerRun) {
-                Socket socket = ss.accept();
-                socketStore.addSocket(socket);
-                logger.log(Level.INFO, "new client " + socket.getInetAddress() + " connected");
-                new Thread(new SocketProcessor(socket)).run();
-            }
-        } catch (IOException e) {
-            throw new ServerException("Socket io exception", e);
+            createClientSocket();
+        } catch (ServerException e) {
+            logger.log(Level.ERROR, e);
         }
     }
 
@@ -55,12 +51,41 @@ public class SearchServer {
             logger.log(Level.INFO,"searchserver has already stopped");
             return;
         }
+        logger.log(Level.INFO, "searchserver was stopped");
         isServerRun = false;
+        closeClientSocket();
+        closeServerSocket();
+    }
 
+    private void createServerSocket() throws ServerException {
+        try {
+            ss = new ServerSocket(PORT);
+            logger.log(Level.INFO, "created new ServerSocket");
+        } catch (IOException e) {
+            throw new ServerException("ServerSocket io exception", e);
+        }
+    }
+
+    private void createClientSocket() throws ServerException {
+        try {
+            while (isServerRun) {
+                Socket socket = ss.accept();
+                socketStore.addSocket(socket);
+                logger.log(Level.INFO, "new client " + socket.getInetAddress() + " connected");
+                new Thread(new SocketProcessor(socket)).start();
+            }
+        } catch (IOException e) {
+            throw new ServerException("Socket io exception", e);
+        }
+    }
+
+    private void closeClientSocket() throws ServerException {
         SocketStoreManager socketStoreManager = new SocketStoreManager();
         socketStoreManager.closeSockets(socketStore);
         socketStoreManager.clearStore(socketStore);
+    }
 
+    private void closeServerSocket() throws ServerException {
         try {
             ss.close();
             ss = null;

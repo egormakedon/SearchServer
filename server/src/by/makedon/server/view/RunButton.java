@@ -1,17 +1,12 @@
 package by.makedon.server.view;
 
-import by.makedon.server.exception.ServerException;
 import by.makedon.server.searchserver.SearchServer;
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
 public class RunButton extends Button {
     private SearchServer searchServer;
-    static Logger logger = LogManager.getLogger(RunButton.class);
 
     public RunButton(String title) {
         super(title);
@@ -19,11 +14,7 @@ public class RunButton extends Button {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        try {
-            searchServer.runServer();
-        } catch (ServerException e1) {
-            logger.log(Level.ERROR, e1);
-        }
+        new Thread(searchServer).start();
     }
 
     @Override

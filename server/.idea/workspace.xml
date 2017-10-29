@@ -15,8 +15,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/by/makedon/server/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+            <state relative-caret-position="126">
+              <caret line="7" column="55" lean-forward="true" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -27,8 +27,8 @@
       <file leaf-file-name="SearchServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/by/makedon/server/searchserver/SearchServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+            <state relative-caret-position="1116">
+              <caret line="77" column="64" lean-forward="true" selection-start-line="77" selection-start-column="64" selection-end-line="77" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,49 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Frame.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/by/makedon/server/view/frame/Frame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="54" column="31" lean-forward="true" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RunButton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/makedon/server/view/RunButton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="20" column="48" lean-forward="true" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-              <folding>
-                <element signature="e#981#982#0" expanded="true" />
-                <element signature="e#1029#1030#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StopButton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/makedon/server/view/StopButton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-              <folding>
-                <element signature="e#985#986#0" expanded="true" />
-                <element signature="e#1033#1034#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SocketProcessor.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SocketProcessor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/by/makedon/server/socket/SocketProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="324">
+              <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,20 +80,20 @@
         <option value="$PROJECT_DIR$/src/by/makedon/server/server/SocketProcessor.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/server/exception/SocketException.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/server/socket/SocketStore.java" />
-        <option value="$PROJECT_DIR$/src/by/makedon/server/socket/SocketStoreManager.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/server/server/SearchServer.java" />
-        <option value="$PROJECT_DIR$/src/by/makedon/server/socket/SocketProcessor.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/server/serverview/FrameAction.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/server/serverview/Frame.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/server/frame/FrameAction.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/server/frame/Frame.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/server/view/frame/FrameAction.java" />
-        <option value="$PROJECT_DIR$/src/by/makedon/server/searchserver/SearchServer.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/server/main/Main.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/server/view/Button.java" />
+        <option value="$PROJECT_DIR$/src/by/makedon/server/view/frame/Frame.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/server/view/RunButton.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/server/view/StopButton.java" />
-        <option value="$PROJECT_DIR$/src/by/makedon/server/view/frame/Frame.java" />
+        <option value="$PROJECT_DIR$/src/by/makedon/server/socket/SocketStoreManager.java" />
+        <option value="$PROJECT_DIR$/src/by/makedon/server/searchserver/SearchServer.java" />
+        <option value="$PROJECT_DIR$/src/by/makedon/server/socket/SocketProcessor.java" />
       </list>
     </option>
   </component>
@@ -142,10 +104,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="873" />
-    <option name="y" value="4" />
-    <option name="width" value="1258" />
-    <option name="height" value="1035" />
+    <option name="y" value="24" />
+    <option name="width" value="960" />
+    <option name="height" value="1007" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -175,6 +136,11 @@
             <path>
               <item name="server" type="b2602c69:ProjectViewProjectNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -188,7 +154,7 @@
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="socket" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -200,7 +166,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../pbz/2/InformationServiceOfTheCity" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../client" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -342,12 +308,12 @@
       <workItem from="1508910988500" duration="14549000" />
       <workItem from="1508951395811" duration="1198000" />
       <workItem from="1509048353228" duration="591000" />
-      <workItem from="1509102933773" duration="6501000" />
+      <workItem from="1509102933773" duration="9417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47265000" />
+    <option name="totallyTimeSpent" value="50181000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1920" height="1035" extended-state="6" />
@@ -390,12 +356,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/by/makedon/server/main/server/SearchServer.java" />
     <entry file="file://$PROJECT_DIR$/src/by/makedon/server/main/server/SocketProcessor.java" />
     <entry file="file://$PROJECT_DIR$/src/by/makedon/server/main/sessionModel/SessionModel.java" />
     <entry file="file://$PROJECT_DIR$/src/by/makedon/server/main/Main.java">
@@ -508,26 +473,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/makedon/server/socket/SocketStoreManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/makedon/server/socket/SocketStore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="10" column="45" lean-forward="true" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/makedon/server/socket/SocketController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -602,16 +551,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/makedon/server/socket/SocketProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/makedon/server/view/frame/FrameAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -646,52 +585,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/makedon/server/view/StopButton.java">
+    <entry file="file://$PROJECT_DIR$/src/by/makedon/server/view/frame/Frame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        <state relative-caret-position="1134">
+          <caret line="63" column="5" lean-forward="false" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
           <folding>
-            <element signature="e#985#986#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/makedon/server/searchserver/SearchServer.java">
+    <entry file="file://$PROJECT_DIR$/src/by/makedon/server/socket/SocketController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        <state relative-caret-position="36">
+          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/makedon/server/socket/SocketStoreManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/log.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/makedon/server/view/StopButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/makedon/server/view/RunButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#396#397#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/makedon/server/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+        <state relative-caret-position="126">
+          <caret line="7" column="55" lean-forward="true" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/makedon/server/view/RunButton.java">
+    <entry file="file://$PROJECT_DIR$/src/by/makedon/server/searchserver/SearchServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="20" column="48" lean-forward="true" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+        <state relative-caret-position="1116">
+          <caret line="77" column="64" lean-forward="true" selection-start-line="77" selection-start-column="64" selection-end-line="77" selection-end-column="64" />
           <folding>
-            <element signature="e#981#982#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/makedon/server/view/frame/Frame.java">
+    <entry file="file://$PROJECT_DIR$/src/by/makedon/server/socket/SocketProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="54" column="31" lean-forward="true" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+        <state relative-caret-position="324">
+          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
