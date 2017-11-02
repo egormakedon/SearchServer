@@ -1,8 +1,8 @@
 package by.makedon.server.view.frame;
 
 import by.makedon.server.searchserver.SearchServer;
-import by.makedon.server.view.RunButton;
-import by.makedon.server.view.StopButton;
+import by.makedon.server.view.button.RunButton;
+import by.makedon.server.view.button.StopButton;
 
 import javax.swing.*;
 import java.awt.*;
@@ -30,21 +30,21 @@ public class Frame {
     }
 
     public void setFrame() {
-        FrameAction frameAction = new FrameAction();
+        FrameCreator frameCreator = new FrameCreator();
 
         final String FRAME_TITLE = "Server";
-        frameAction.setTittle(frame, FRAME_TITLE);
+        frameCreator.setTittle(frame, FRAME_TITLE);
 
         final int W = 500;
         final int H = 500;
-        frameAction.setSize(frame, W, H);
+        frameCreator.setSize(frame, W, H);
 
-        frameAction.setLayout(frame, new GridBagLayout());
+        frameCreator.setLayout(frame, new GridBagLayout());
 
         setSearchServerToButton();
         setListenerToButton();
-        frameAction.setButton(frame, runButton.getButton());
-        frameAction.setButton(frame, stopButton.getButton());
+        frameCreator.setButton(frame, runButton.getButton());
+        frameCreator.setButton(frame, stopButton.getButton());
     }
 
     public void show() {

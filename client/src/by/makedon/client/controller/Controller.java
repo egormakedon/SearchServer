@@ -1,17 +1,17 @@
 package by.makedon.client.controller;
 
-import by.makedon.client.model.Client;
-import by.makedon.client.model.ServerData;
+import by.makedon.client.socket.ClientSocket;
+import by.makedon.client.socket.ClientSocketInfo;
 import by.makedon.client.exception.WrongConnectionException;
 import by.makedon.client.validator.SocketParamsValidator;
 
 public class Controller {
-    private ServerData serverData;
-    private Client client;
-    public void setServerData(ServerData serverData) {
-        this.serverData = serverData;
+    private ClientSocketInfo clientSocketInfo;
+    private ClientSocket clientSocket;
+    public void setClientSocketInfo(ClientSocketInfo clientSocketInfo) {
+        this.clientSocketInfo = clientSocketInfo;
     }
-    public void setClient(Client client) { this.client = client; }
+    public void setClientSocket(ClientSocket clientSocket) { this.clientSocket = clientSocket; }
 
     public void connect(String ip, String port) throws WrongConnectionException {
         if (isConnection()) {
@@ -29,22 +29,22 @@ public class Controller {
         }
     }
     private boolean isConnection() {
-        return serverData.isConnection();
+        return clientSocketInfo.isConnection();
     }
     private void createSocket(String ip, int port) throws WrongConnectionException {
-        if (client.createSocket(ip, port)) {
-            serverData.setIp(ip);
-            serverData.setPort(port);
-            serverData.setConnectionTrue();
+        if (clientSocket.createSocket(ip, port)) {
+            clientSocketInfo.setIp(ip);
+            clientSocketInfo.setPort(port);
+            clientSocketInfo.setConnectionTrue();
         }
     }
 
     public boolean disconnect() {
         if (isConnection()) {
-            serverData.setIpNull();
-            serverData.setPortNull();
-            serverData.setConnectionFalse();
-            client.close();
+            clientSocketInfo.setIpNull();
+            clientSocketInfo.setPortNull();
+            clientSocketInfo.setConnectionFalse();
+            clientSocket.close();
             return true;
         } else {
             return false;
@@ -55,9 +55,9 @@ public class Controller {
         String[] strings = new String[3];
         final String RED = "255 0 0";
         final String GREEN = "0 255 0";
-        if (serverData.isConnection()) {
-            strings[0] = serverData.getIp();
-            strings[1] = Integer.toString(serverData.getPort());
+        if (clientSocketInfo.isConnection()) {
+            strings[0] = clientSocketInfo.getIp();
+            strings[1] = Integer.toString(clientSocketInfo.getPort());
             strings[2] = GREEN;
         } else {
             strings[0] = "";

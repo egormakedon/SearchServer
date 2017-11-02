@@ -48,9 +48,9 @@ public class DisconnectionDialog extends Dialog {
         @Override
         public void actionPerformed(ActionEvent e) {
             if (controller.disconnect()) {
-                logger.log(Level.INFO, "Client disconnected");
+                logger.log(Level.INFO, "ClientSocket disconnected");
             } else {
-                logger.log(Level.ERROR, "Client haven't connected yet");
+                logger.log(Level.ERROR, "ClientSocket haven't connected yet");
             }
         }
     }
