@@ -1,8 +1,8 @@
 package by.makedon.client.view.frame;
 
 import by.makedon.client.controller.Controller;
-import by.makedon.client.informationElement.InformationPanel;
-import by.makedon.client.searchElement.PanelForSearchElements;
+import by.makedon.client.view.informationElement.InformationPanel;
+import by.makedon.client.view.searchElement.PanelForSearchElements;
 
 import javax.swing.*;
 import java.awt.*;

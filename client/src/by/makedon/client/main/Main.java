@@ -6,7 +6,7 @@ import by.makedon.client.view.frame.MainFrame;
 import by.makedon.client.model.ServerData;
 
 public class Main {
-    public static void main(String []arg) {
+    public static void main(String[] args) {
         ServerData serverData = new ServerData();
         Client client = new Client();
         Controller controller = new Controller();

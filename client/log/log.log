@@ -1,38 +1,38 @@
-2017-10-11 13:44:56.824 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Tried to set connection when you have already connected
-2017-10-11 13:51:52.676 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: 
-2017-10-11 13:54:11.116 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: 
-2017-10-11 13:54:16.680 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: 
-2017-10-11 13:54:21.032 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: 
-2017-10-11 13:54:30.974 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid port: 
-2017-10-11 13:57:43.452 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: 
-2017-10-11 13:58:03.238 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid port: 
-2017-10-11 14:03:24.836 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: 
-2017-10-11 14:06:59.544 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: 
-2017-10-11 14:07:54.039 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: 
-2017-10-11 14:17:37.192 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: 
-2017-10-11 14:24:25.834 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: 
-2017-10-11 14:24:45.232 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: йцуйуйу
-2017-10-11 14:25:07.584 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: уццуе
-2017-10-11 14:25:29.915 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid port: 123
-2017-10-11 14:29:13.988 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - kek
-2017-10-11 14:32:22.651 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: wqeq
-2017-10-11 14:42:42.379 [AWT-EventQueue-0] INFO  by.makedon.client.dialog.DisconnectionDialog - Client haven't connected yet
-2017-10-11 14:43:10.062 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: 
-2017-10-11 14:43:12.628 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: wqe
-2017-10-11 14:43:14.444 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: wqe
-2017-10-11 14:43:16.073 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: wqe
-2017-10-11 14:43:17.427 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: wqe
-2017-10-11 17:57:01.319 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Connection didn't set
-2017-10-11 18:05:57.653 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Connection didn't set
-2017-10-11 18:06:22.267 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Connection didn't set
-2017-10-11 18:06:59.661 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Connection didn't set
-2017-10-11 18:07:14.879 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Connection didn't set
-2017-10-11 19:01:16.166 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.DisconnectionDialog - Client haven't connected yet
-2017-10-11 19:01:16.320 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.DisconnectionDialog - Client haven't connected yet
-2017-10-11 19:01:16.476 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.DisconnectionDialog - Client haven't connected yet
-2017-10-15 20:10:12.945 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: qweqw
-2017-10-15 20:11:13.254 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: adqdq
+2017-10-11 13:44:56.824 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Tried to set connection when you have already connected
+2017-10-11 13:51:52.676 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip:
+2017-10-11 13:54:11.116 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip:
+2017-10-11 13:54:16.680 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip:
+2017-10-11 13:54:21.032 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip:
+2017-10-11 13:54:30.974 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid port:
+2017-10-11 13:57:43.452 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip:
+2017-10-11 13:58:03.238 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid port:
+2017-10-11 14:03:24.836 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip:
+2017-10-11 14:06:59.544 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip:
+2017-10-11 14:07:54.039 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip:
+2017-10-11 14:17:37.192 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip:
+2017-10-11 14:24:25.834 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip:
+2017-10-11 14:24:45.232 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip: йцуйуйу
+2017-10-11 14:25:07.584 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip: уццуе
+2017-10-11 14:25:29.915 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid port: 123
+2017-10-11 14:29:13.988 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - kek
+2017-10-11 14:32:22.651 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip: wqeq
+2017-10-11 14:42:42.379 [AWT-EventQueue-0] INFO  by.makedon.client.view.dialog.DisconnectionDialog - Client haven't connected yet
+2017-10-11 14:43:10.062 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip:
+2017-10-11 14:43:12.628 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip: wqe
+2017-10-11 14:43:14.444 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip: wqe
+2017-10-11 14:43:16.073 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip: wqe
+2017-10-11 14:43:17.427 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip: wqe
+2017-10-11 17:57:01.319 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Connection didn't set
+2017-10-11 18:05:57.653 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Connection didn't set
+2017-10-11 18:06:22.267 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Connection didn't set
+2017-10-11 18:06:59.661 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Connection didn't set
+2017-10-11 18:07:14.879 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Connection didn't set
+2017-10-11 19:01:16.166 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.DisconnectionDialog - Client haven't connected yet
+2017-10-11 19:01:16.320 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.DisconnectionDialog - Client haven't connected yet
+2017-10-11 19:01:16.476 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.DisconnectionDialog - Client haven't connected yet
+2017-10-15 20:10:12.945 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip: qweqw
+2017-10-15 20:11:13.254 [AWT-EventQueue-0] ERROR by.makedon.client.view.dialog.ConnectionDialog - Invalid ip: adqdq
 2017-10-15 20:13:47.149 [main] INFO  by.makedon.client.main.Main - kek
 2017-10-29 03:08:18.870 [AWT-EventQueue-0] INFO  by.makedon.client.model.Client - Client connected
 2017-10-29 14:52:21.482 [AWT-EventQueue-0] INFO  by.makedon.client.model.Client - Client connected
-2017-10-29 14:52:30.372 [AWT-EventQueue-0] INFO  by.makedon.client.dialog.DisconnectionDialog - Client disconnected
+2017-10-29 14:52:30.372 [AWT-EventQueue-0] INFO  by.makedon.client.view.dialog.DisconnectionDialog - Client disconnected

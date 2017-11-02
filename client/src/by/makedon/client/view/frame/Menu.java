@@ -1,10 +1,10 @@
 package by.makedon.client.view.frame;
 
 import by.makedon.client.controller.Controller;
-import by.makedon.client.view.ExitMenuItem;
-import by.makedon.client.view.DisconnectionMenuItem;
-import by.makedon.client.view.CheckMenuItem;
-import by.makedon.client.view.ConnectionMenuItem;
+import by.makedon.client.view.menuitem.ExitMenuItem;
+import by.makedon.client.view.menuitem.DisconnectionMenuItem;
+import by.makedon.client.view.menuitem.CheckMenuItem;
+import by.makedon.client.view.menuitem.ConnectionMenuItem;
 
 import javax.swing.*;
 

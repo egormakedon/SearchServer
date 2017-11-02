@@ -1,4 +1,4 @@
-package by.makedon.client.dialog;
+package by.makedon.client.view.dialog;
 
 import by.makedon.client.controller.Controller;
 import by.makedon.client.exception.WrongConnectionException;

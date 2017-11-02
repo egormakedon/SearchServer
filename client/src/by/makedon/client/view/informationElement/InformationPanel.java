@@ -1,4 +1,4 @@
-package by.makedon.client.informationElement;
+package by.makedon.client.view.informationElement;
 
 import javax.swing.*;
 

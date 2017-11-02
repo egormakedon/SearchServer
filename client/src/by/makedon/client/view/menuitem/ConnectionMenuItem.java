@@ -1,7 +1,7 @@
-package by.makedon.client.view;
+package by.makedon.client.view.menuitem;
 
 import by.makedon.client.controller.Controller;
-import by.makedon.client.dialog.ConnectionDialog;
+import by.makedon.client.view.dialog.ConnectionDialog;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

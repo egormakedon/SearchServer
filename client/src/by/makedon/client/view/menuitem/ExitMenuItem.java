@@ -1,4 +1,4 @@
-package by.makedon.client.view;
+package by.makedon.client.view.menuitem;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

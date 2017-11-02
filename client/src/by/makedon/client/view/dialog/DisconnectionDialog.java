@@ -1,7 +1,6 @@
-package by.makedon.client.dialog;
+package by.makedon.client.view.dialog;
 
 import by.makedon.client.controller.Controller;
-import by.makedon.client.exception.WrongConnectionException;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

@@ -10,7 +10,7 @@ public class SocketStoreManager {
     public void closeSockets(SocketStore socketStore) throws ServerException {
         List<Socket> socketList = socketStore.getSocketList();
         for (Socket socket : socketList) {
-            if (!socket.isClosed()) {
+            if (socket != null && !socket.isClosed()) {
                 try {
                     socket.close();
                 } catch (IOException e) {
@@ -23,7 +23,7 @@ public class SocketStoreManager {
     public void clearStore(SocketStore socketStore) {
         List<Socket> socketList = socketStore.getSocketList();
         for (Socket socket : socketList) {
-            if (socket.isClosed()) {
+            if (socket == null || socket.isClosed()) {
                 socketList.remove(socket);
             }
         }

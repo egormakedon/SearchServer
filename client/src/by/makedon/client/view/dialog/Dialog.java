@@ -1,4 +1,4 @@
-package by.makedon.client.dialog;
+package by.makedon.client.view.dialog;
 
 import javax.swing.*;
 import java.awt.*;

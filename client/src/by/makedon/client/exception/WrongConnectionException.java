@@ -5,15 +5,15 @@ public class WrongConnectionException extends Exception {
 
     }
 
-    public WrongConnectionException(String message) {
-        super(message);
+    public WrongConnectionException(String m) {
+        super(m);
     }
 
-    public WrongConnectionException(String message, Throwable exception) {
-        super(message, exception);
+    public WrongConnectionException(String m, Throwable e) {
+        super(m, e);
     }
 
-    public WrongConnectionException(Throwable exception) {
-        super(exception);
+    public WrongConnectionException(Throwable e) {
+        super(e);
     }
 }
