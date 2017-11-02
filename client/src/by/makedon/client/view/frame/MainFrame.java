@@ -1,8 +1,9 @@
 package by.makedon.client.view.frame;
 
 import by.makedon.client.controller.ClientController;
-import by.makedon.client.view.informationElement.InformationPanel;
-import by.makedon.client.view.searchElement.PanelForSearchElements;
+import by.makedon.client.view.panel.MenuBar;
+import by.makedon.client.view.panel.InformationPanel;
+import by.makedon.client.view.panel.PanelForSearchElements;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,52 +19,44 @@ public class MainFrame {
     }
 
     public void set() {
-        setFrMinSize();
-        setFr();
-        addMenuBar();
-        addMenu();
-        addPanelForSearchElements();
-        addInformationPanel();
-    }
-
-    private void setFrMinSize() {
-        final int MIN_WIDTH = 1600;
-        final int MIN_HEIGHT = 900;
-        fr.setMinimumSize(new Dimension(MIN_WIDTH, MIN_HEIGHT));
-    }
-
-    private void setFr() {
-        fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        fr.setLocationRelativeTo(null);
-        fr.setExtendedState(Frame.MAXIMIZED_BOTH);
-    }
-
-    private void addMenuBar() {
-        MenuBar menuBar = new MenuBar();
-        menuBar.set();
-        fr.setJMenuBar(menuBar.getMenuBar());
-    }
-
-    private void addMenu() {
-        Menu menu = new Menu();
-        menu.setClientController(clientController);
-        menu.set();
-        JMenuBar menuBar = fr.getJMenuBar();
-        menuBar.add(menu.getMenu());
-    }
-
-    private void addPanelForSearchElements() {
-        PanelForSearchElements panel = new PanelForSearchElements();
-        panel.set();
-        fr.add(panel.getPanel(), BorderLayout.NORTH);
-    }
-
-    private void addInformationPanel() {
-        InformationPanel panel = new InformationPanel();
-        fr.add(panel.getInformationPanel(), BorderLayout.CENTER);
+        frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+        setSize();
+        addElements();
     }
 
     public void show() {
-        fr.setVisible(true);
+        frame.setVisible(true);
     }
+
+    private void setSize() {
+        final int MIN_WIDTH = 1600;
+        final int MIN_HEIGHT = 900;
+        frame.setMinimumSize(new Dimension(MIN_WIDTH, MIN_HEIGHT));
+
+        frame.setExtendedState(Frame.MAXIMIZED_BOTH);
+        frame.setLocationRelativeTo(null);
+    }
+
+    private void addElements() {
+        addMenuBar();
+        addSearchPanel();
+        addTablePanel();
+    }
+
+    private void addMenuBar() {
+        MenuBar menuBar = new MenuBar(clientController);
+        menuBar.set();
+        frame.setJMenuBar(menuBar.getMenuBar());
+    }
+
+//    private void addSearchPanel() {
+//        PanelForSearchElements panel = new PanelForSearchElements();
+//        panel.set();
+//        fr.add(panel.getPanel(), BorderLayout.NORTH);
+//    }
+//
+//    private void addTablePanel() {
+//        InformationPanel panel = new InformationPanel();
+//        fr.add(panel.getInformationPanel(), BorderLayout.CENTER);
+//    }
 }

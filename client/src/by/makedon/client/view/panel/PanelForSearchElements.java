@@ -1,4 +1,7 @@
-package by.makedon.client.view.searchElement;
+package by.makedon.client.view.panel;
+
+import by.makedon.client.view.searchelement.SearchButton;
+import by.makedon.client.view.searchelement.SearchLine;
 
 import javax.swing.*;
 import java.awt.*;

@@ -13,31 +13,36 @@ import java.awt.event.ActionListener;
 
 public class ConnectionDialog extends Dialog {
     private ClientController clientController;
-    private JTextField ipField = new JTextField();
-    private JTextField portField = new JTextField();
-    private JButton button = new JButton("Connect");
+    private JTextField ipField;
+    private JTextField portField;
+    private JButton button;
     static Logger logger = LogManager.getLogger(ConnectionDialog.class);
 
-    public ConnectionDialog(String TITLE) {
+    public ConnectionDialog(String TITLE, ClientController clientController) {
         super(TITLE);
-    }
-    public void setClientController(ClientController clientController) {
         this.clientController = clientController;
+        ipField = new JTextField();
+        portField = new JTextField();
+        button = new JButton("Connect");
     }
 
     public void set() {
         setSize();
         setDialog();
         setLayout();
-        addIp();
-        addPort();
-        addButton();
+        addElement();
     }
 
     private void setLayout() {
         final int ROWS = 3;
         final int COLS = 2;
         dialog.setLayout(new GridLayout(ROWS, COLS));
+    }
+
+    private void addElement() {
+        addIp();
+        addPort();
+        addButton();
     }
 
     private void addIp() {
@@ -53,13 +58,9 @@ public class ConnectionDialog extends Dialog {
     }
 
     private void addButton() {
-        setButtonListener();
-        dialog.add(button);
-    }
-
-    private void setButtonListener() {
         ButtonListener buttonListener = new ButtonListener();
         button.addActionListener(buttonListener);
+        dialog.add(button);
     }
 
     class ButtonListener implements ActionListener {
@@ -69,9 +70,9 @@ public class ConnectionDialog extends Dialog {
             String port = portField.getText();
             try {
                 clientController.connect(ip, port);
-            } catch (WrongConnectionException exc) {
-                JOptionPane.showMessageDialog(null, "Exception. Check log.");
-                logger.log(Level.ERROR, exc.getMessage());
+            } catch (WrongConnectionException e1) {
+                JOptionPane.showMessageDialog(dialog,"Wrong connect to server");
+                logger.log(Level.ERROR, e1);
             }
         }
     }

@@ -1,4 +1,4 @@
-package by.makedon.client.view.searchElement;
+package by.makedon.client.view.searchelement;
 
 import javax.swing.*;
 import java.awt.*;

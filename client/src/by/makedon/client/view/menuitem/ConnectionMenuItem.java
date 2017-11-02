@@ -8,21 +8,21 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ConnectionMenuItem {
-    private JMenuItem menuItem = new JMenuItem();
+    private JMenuItem menuItem;
     private ClientController clientController;
 
-    public void setClientController(ClientController clientController) {
+    public ConnectionMenuItem(ClientController clientController) {
+        final String TITLE = "<html><font style=’italic’ size = 4>" + "Connection to server..." + "</html>";
+        menuItem = new JMenuItem(TITLE);
         this.clientController = clientController;
     }
 
     public void set() {
-        setTittle();
         addDialog();
     }
 
-    private void setTittle() {
-        final String TITLE = "<html><font style=’italic’ size = 4>" + "Connection to server..." + "</html>";
-        menuItem.setText(TITLE);
+    public JMenuItem getConnectionMenuItem() {
+        return menuItem;
     }
 
     private void addDialog() {
@@ -30,15 +30,10 @@ public class ConnectionMenuItem {
             @Override
             public void actionPerformed(ActionEvent e) {
                 final String DIALOG_TITLE = "Connection to server...";
-                ConnectionDialog connectionDialog = new ConnectionDialog(DIALOG_TITLE);
-                connectionDialog.setClientController(clientController);
+                ConnectionDialog connectionDialog = new ConnectionDialog(DIALOG_TITLE, clientController);
                 connectionDialog.set();
                 connectionDialog.show();
             }
         });
-    }
-
-    public JMenuItem getConnectionMenuItem() {
-        return menuItem;
     }
 }
