@@ -16,7 +16,7 @@ public class ClientSocket {
     public boolean createClientSocket(String ip, int port) throws WrongConnectionException {
         try {
             InetAddress inetAddress = InetAddress.getByName(ip);
-            final int TIMEOUT = 1000;
+            final int TIMEOUT = 1_000;
             if (!inetAddress.isReachable(TIMEOUT)) {
                 throw new WrongConnectionException("Connection didn't set");
             }

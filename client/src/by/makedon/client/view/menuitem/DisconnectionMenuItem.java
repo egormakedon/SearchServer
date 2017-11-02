@@ -8,21 +8,21 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class DisconnectionMenuItem {
-    private JMenuItem menuItem = new JMenuItem();
+    private JMenuItem menuItem;
     private ClientController clientController;
 
-    public void setClientController(ClientController clientController) {
+    public DisconnectionMenuItem(ClientController clientController) {
+        final String TITLE = "<html><font style=’italic’ size = 4>" + "Disconnection from server..." + "</html>";
+        menuItem = new JMenuItem(TITLE);
         this.clientController = clientController;
     }
 
     public void set() {
-        setTitle();
         addDialog();
     }
 
-    private void setTitle() {
-        final String TITLE = "<html><font style=’italic’ size = 4>" + "Disconnection from server..." + "</html>";
-        menuItem.setText(TITLE);
+    public JMenuItem getDisconnectionMenuItem() {
+        return menuItem;
     }
 
     private void addDialog() {
@@ -30,15 +30,10 @@ public class DisconnectionMenuItem {
             @Override
             public void actionPerformed(ActionEvent e) {
                 final String DIALOG_TITLE = "Disconnection from server...";
-                DisconnectionDialog disconnectionDialog = new DisconnectionDialog(DIALOG_TITLE);
-                disconnectionDialog.setClientController(clientController);
+                DisconnectionDialog disconnectionDialog = new DisconnectionDialog(DIALOG_TITLE, clientController);
                 disconnectionDialog.set();
                 disconnectionDialog.show();
             }
         });
-    }
-
-    public JMenuItem getDisconnectionMenuItem() {
-        return menuItem;
     }
 }

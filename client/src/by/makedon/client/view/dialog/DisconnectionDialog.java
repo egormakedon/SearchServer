@@ -11,16 +11,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class DisconnectionDialog extends Dialog {
-    private JButton button = new JButton("Disconnect");
+    private JButton button ;
     private ClientController clientController;
     static Logger logger = LogManager.getLogger(DisconnectionDialog.class);
 
-    public DisconnectionDialog(String TITLE) {
+    public DisconnectionDialog(String TITLE, ClientController clientController) {
         super(TITLE);
-    }
-
-    public void setClientController(ClientController clientController) {
         this.clientController = clientController;
+        button = new JButton("Disconnect");
     }
 
     public void set() {
@@ -35,22 +33,19 @@ public class DisconnectionDialog extends Dialog {
     }
 
     private void addButton() {
-        setButtonListener();
-        dialog.add(button);
-    }
-
-    private void setButtonListener() {
         ButtonListener buttonListener = new ButtonListener();
         button.addActionListener(buttonListener);
+        dialog.add(button);
     }
 
     class ButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
             if (clientController.disconnect()) {
-                logger.log(Level.INFO, "ClientSocket disconnected");
+                logger.log(Level.INFO,"ClientSocket disconnected");
             } else {
-                logger.log(Level.ERROR, "ClientSocket haven't connected yet");
+                JOptionPane.showMessageDialog(dialog, "ClientSocket haven't connected yet");
+                logger.log(Level.ERROR,"ClientSocket haven't connected yet");
             }
         }
     }

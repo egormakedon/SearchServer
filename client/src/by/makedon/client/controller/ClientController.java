@@ -1,54 +1,32 @@
 package by.makedon.client.controller;
 
-import by.makedon.client.socket.ClientSocket;
-import by.makedon.client.socket.ClientSocketInfo;
 import by.makedon.client.exception.WrongConnectionException;
 import by.makedon.client.validator.SocketParamsValidator;
 
 public class ClientController {
-    private ClientSocketInfo clientSocketInfo;
-    private ClientSocket clientSocket;
-    public void setClientSocketInfo(ClientSocketInfo clientSocketInfo) {
-        this.clientSocketInfo = clientSocketInfo;
+    private ClientSocketProcessor clientSocketProcessor;
+
+    public ClientController(ClientSocketProcessor clientSocketProcessor) {
+        this.clientSocketProcessor = clientSocketProcessor;
     }
-    public void setClientSocket(ClientSocket clientSocket) { this.clientSocket = clientSocket; }
 
     public void connect(String ip, String port) throws WrongConnectionException {
-        if (isConnection()) {
+        SocketParamsValidator validator = new SocketParamsValidator();
+        if (!validator.validationIp(ip)) {
+            throw new WrongConnectionException("Invalid ip: " + ip);
+        }
+        if (!validator.validationPort(port)) {
+            throw new WrongConnectionException("Invalid port: " + port);
+        }
+        if (clientSocketProcessor.isConnection()) {
             throw new WrongConnectionException("Tried to set connection when you have already connected");
-        } else {
-            SocketParamsValidator validator = new SocketParamsValidator();
-            if (!validator.validationIp(ip)) {
-                throw new WrongConnectionException("Invalid ip: " + ip);
-            }
-            if (!validator.validationPort(port)) {
-                throw new WrongConnectionException("Invalid port: " + port);
-            }
+        }
 
-            createSocket(ip, Integer.parseInt(port));
-        }
-    }
-    private boolean isConnection() {
-        return clientSocketInfo.isConnection();
-    }
-    private void createSocket(String ip, int port) throws WrongConnectionException {
-        if (clientSocket.createClientSocket(ip, port)) {
-            clientSocketInfo.setIp(ip);
-            clientSocketInfo.setPort(port);
-            clientSocketInfo.setConnectionTrue();
-        }
+        clientSocketProcessor.createClientSocket(ip, Integer.parseInt(port));
     }
 
     public boolean disconnect() {
-        if (isConnection()) {
-            clientSocketInfo.setIpNull();
-            clientSocketInfo.setPortNull();
-            clientSocketInfo.setConnectionFalse();
-            clientSocket.closeClientSocket();
-            return true;
-        } else {
-            return false;
-        }
+        return clientSocketProcessor.closeClientSocket();
     }
 
     public String[] addInfToCheckDialog() {
