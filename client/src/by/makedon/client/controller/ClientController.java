@@ -5,7 +5,7 @@ import by.makedon.client.socket.ClientSocketInfo;
 import by.makedon.client.exception.WrongConnectionException;
 import by.makedon.client.validator.SocketParamsValidator;
 
-public class Controller {
+public class ClientController {
     private ClientSocketInfo clientSocketInfo;
     private ClientSocket clientSocket;
     public void setClientSocketInfo(ClientSocketInfo clientSocketInfo) {
@@ -32,7 +32,7 @@ public class Controller {
         return clientSocketInfo.isConnection();
     }
     private void createSocket(String ip, int port) throws WrongConnectionException {
-        if (clientSocket.createSocket(ip, port)) {
+        if (clientSocket.createClientSocket(ip, port)) {
             clientSocketInfo.setIp(ip);
             clientSocketInfo.setPort(port);
             clientSocketInfo.setConnectionTrue();
@@ -44,7 +44,7 @@ public class Controller {
             clientSocketInfo.setIpNull();
             clientSocketInfo.setPortNull();
             clientSocketInfo.setConnectionFalse();
-            clientSocket.close();
+            clientSocket.closeClientSocket();
             return true;
         } else {
             return false;

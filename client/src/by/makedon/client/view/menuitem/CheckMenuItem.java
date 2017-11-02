@@ -1,6 +1,6 @@
 package by.makedon.client.view.menuitem;
 
-import by.makedon.client.controller.Controller;
+import by.makedon.client.controller.ClientController;
 import by.makedon.client.view.dialog.CheckDialog;
 
 import javax.swing.*;
@@ -9,10 +9,10 @@ import java.awt.event.ActionListener;
 
 public class CheckMenuItem {
     private JMenuItem menuItem = new JMenuItem();
-    private Controller controller;
+    private ClientController clientController;
 
-    public void setController(Controller controller) {
-        this.controller = controller;
+    public void setClientController(ClientController clientController) {
+        this.clientController = clientController;
     }
 
     public void set() {
@@ -32,7 +32,7 @@ public class CheckMenuItem {
                 final String DIALOG_TITLE = "Check connection status...";
                 CheckDialog checkDialog = new CheckDialog(DIALOG_TITLE);
                 checkDialog.set();
-                checkDialog.setConnInfPanel(controller.addInfToCheckDialog());
+                checkDialog.setConnInfPanel(clientController.addInfToCheckDialog());
                 checkDialog.show();
             }
         });

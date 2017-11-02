@@ -1,6 +1,6 @@
 package by.makedon.client.view.menuitem;
 
-import by.makedon.client.controller.Controller;
+import by.makedon.client.controller.ClientController;
 import by.makedon.client.view.dialog.ConnectionDialog;
 
 import javax.swing.*;
@@ -9,10 +9,10 @@ import java.awt.event.ActionListener;
 
 public class ConnectionMenuItem {
     private JMenuItem menuItem = new JMenuItem();
-    private Controller controller;
+    private ClientController clientController;
 
-    public void setController(Controller controller) {
-        this.controller = controller;
+    public void setClientController(ClientController clientController) {
+        this.clientController = clientController;
     }
 
     public void set() {
@@ -31,7 +31,7 @@ public class ConnectionMenuItem {
             public void actionPerformed(ActionEvent e) {
                 final String DIALOG_TITLE = "Connection to server...";
                 ConnectionDialog connectionDialog = new ConnectionDialog(DIALOG_TITLE);
-                connectionDialog.setController(controller);
+                connectionDialog.setClientController(clientController);
                 connectionDialog.set();
                 connectionDialog.show();
             }

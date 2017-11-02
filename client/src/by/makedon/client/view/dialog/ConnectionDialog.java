@@ -1,6 +1,6 @@
 package by.makedon.client.view.dialog;
 
-import by.makedon.client.controller.Controller;
+import by.makedon.client.controller.ClientController;
 import by.makedon.client.exception.WrongConnectionException;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -12,7 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ConnectionDialog extends Dialog {
-    private Controller controller;
+    private ClientController clientController;
     private JTextField ipField = new JTextField();
     private JTextField portField = new JTextField();
     private JButton button = new JButton("Connect");
@@ -21,8 +21,8 @@ public class ConnectionDialog extends Dialog {
     public ConnectionDialog(String TITLE) {
         super(TITLE);
     }
-    public void setController(Controller controller) {
-        this.controller = controller;
+    public void setClientController(ClientController clientController) {
+        this.clientController = clientController;
     }
 
     public void set() {
@@ -68,7 +68,7 @@ public class ConnectionDialog extends Dialog {
             String ip = ipField.getText();
             String port = portField.getText();
             try {
-                controller.connect(ip, port);
+                clientController.connect(ip, port);
             } catch (WrongConnectionException exc) {
                 JOptionPane.showMessageDialog(null, "Exception. Check log.");
                 logger.log(Level.ERROR, exc.getMessage());

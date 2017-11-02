@@ -1,6 +1,6 @@
 package by.makedon.client.view.menuitem;
 
-import by.makedon.client.controller.Controller;
+import by.makedon.client.controller.ClientController;
 import by.makedon.client.view.dialog.DisconnectionDialog;
 
 import javax.swing.*;
@@ -9,10 +9,10 @@ import java.awt.event.ActionListener;
 
 public class DisconnectionMenuItem {
     private JMenuItem menuItem = new JMenuItem();
-    private Controller controller;
+    private ClientController clientController;
 
-    public void setController(Controller controller) {
-        this.controller = controller;
+    public void setClientController(ClientController clientController) {
+        this.clientController = clientController;
     }
 
     public void set() {
@@ -31,7 +31,7 @@ public class DisconnectionMenuItem {
             public void actionPerformed(ActionEvent e) {
                 final String DIALOG_TITLE = "Disconnection from server...";
                 DisconnectionDialog disconnectionDialog = new DisconnectionDialog(DIALOG_TITLE);
-                disconnectionDialog.setController(controller);
+                disconnectionDialog.setClientController(clientController);
                 disconnectionDialog.set();
                 disconnectionDialog.show();
             }

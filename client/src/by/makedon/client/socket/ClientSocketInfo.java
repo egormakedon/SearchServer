@@ -2,32 +2,31 @@ package by.makedon.client.socket;
 
 public class ClientSocketInfo {
     private String ip;
-    private Integer port;
-    private boolean isConnection;
+    private int port;
+    private boolean connection;
 
-    public void setIp(String ip) {
+    public void setIpPort(String ip, int port) {
         this.ip = ip;
-    }
-    public void setIpNull() {
-        ip = null;
-    }
-    public void setPort(int port) {
         this.port = port;
     }
 
-    public void setPortNull() {
-        port = null;
-    }
     public void setConnectionTrue() {
-        isConnection = true;
+        connection = true;
     }
-    public void setConnectionFalse() { isConnection = false; }
 
-    public String getIp() { return ip; }
+    public void setConnectionFalse() {
+        connection = false;
+    }
+
+    public String getIp() {
+        return ip;
+    }
+
     public int getPort() {
         return port;
     }
+
     public boolean isConnection() {
-        return isConnection;
+        return connection;
     }
 }

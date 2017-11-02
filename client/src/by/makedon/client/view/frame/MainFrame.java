@@ -1,6 +1,6 @@
 package by.makedon.client.view.frame;
 
-import by.makedon.client.controller.Controller;
+import by.makedon.client.controller.ClientController;
 import by.makedon.client.view.informationElement.InformationPanel;
 import by.makedon.client.view.searchElement.PanelForSearchElements;
 
@@ -8,26 +8,22 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MainFrame {
-    private JFrame fr = new JFrame();
-    private Controller controller;
+    private JFrame frame;
+    private ClientController clientController;
 
-    public void setController(Controller controller) {
-        this.controller = controller;
+    public MainFrame(ClientController clientController) {
+        final String TITLE = "Book Of Reference";
+        frame = new JFrame(TITLE);
+        this.clientController = clientController;
     }
 
     public void set() {
-        setFrTitle();
         setFrMinSize();
         setFr();
         addMenuBar();
         addMenu();
         addPanelForSearchElements();
         addInformationPanel();
-    }
-
-    private void setFrTitle() {
-        final String FR_TITLE = new String ("Encyclopedia client");
-        fr.setTitle(FR_TITLE);
     }
 
     private void setFrMinSize() {
@@ -50,7 +46,7 @@ public class MainFrame {
 
     private void addMenu() {
         Menu menu = new Menu();
-        menu.setController(controller);
+        menu.setClientController(clientController);
         menu.set();
         JMenuBar menuBar = fr.getJMenuBar();
         menuBar.add(menu.getMenu());

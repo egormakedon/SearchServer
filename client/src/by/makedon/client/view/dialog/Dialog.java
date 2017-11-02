@@ -4,17 +4,14 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Dialog {
-    protected JDialog dialog = new JDialog();
+    JDialog dialog;
 
-    public Dialog(String TITLE) {
-        setTitle(TITLE);
-    }
-
-    private void setTitle(String TITLE) {
+    Dialog(String TITLE) {
+        dialog = new JDialog();
         dialog.setTitle(TITLE);
     }
 
-    protected void setSize() {
+    void setSize() {
         final int WIDTH = 600;
         final int HEIGHT = 300;
         dialog.setSize(new Dimension(WIDTH, HEIGHT));
@@ -22,7 +19,7 @@ public class Dialog {
         dialog.setResizable(false);
     }
 
-    protected void setDialog() {
+    void setDialog() {
         dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         dialog.setLayout(null);
         dialog.setLocationRelativeTo(null);

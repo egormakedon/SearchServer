@@ -12,11 +12,11 @@ import java.net.Socket;
 public class ClientSocket {
     private Socket clientSocket;
     static Logger logger = LogManager.getLogger(ClientSocket.class);
-    private final int TIMEOUT = 1000;
 
-    public boolean createSocket(String ip, int port) throws WrongConnectionException {
+    public boolean createClientSocket(String ip, int port) throws WrongConnectionException {
         try {
             InetAddress inetAddress = InetAddress.getByName(ip);
+            final int TIMEOUT = 1000;
             if (!inetAddress.isReachable(TIMEOUT)) {
                 throw new WrongConnectionException("Connection didn't set");
             }
@@ -24,15 +24,19 @@ public class ClientSocket {
             logger.log(Level.INFO, "ClientSocket connected");
             return true;
         } catch (IOException e) {
-            throw new WrongConnectionException(e.getMessage());
+            throw new WrongConnectionException("ClientSocket io exception", e);
         }
     }
 
-    public void close() {
+    public void closeClientSocket() {
         try {
-            if (clientSocket != null) clientSocket.close();
+            if (clientSocket != null && !clientSocket.isClosed()) clientSocket.close();
         } catch (IOException e) {
-            logger.log(Level.INFO, "client socket closed");
+            logger.log(Level.WARN, "ClientSocket io exception", e);
         }
+    }
+
+    public Socket getClientSocket() {
+        return clientSocket;
     }
 }

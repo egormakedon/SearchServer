@@ -1,6 +1,6 @@
 package by.makedon.client.view.frame;
 
-import by.makedon.client.controller.Controller;
+import by.makedon.client.controller.ClientController;
 import by.makedon.client.view.menuitem.ExitMenuItem;
 import by.makedon.client.view.menuitem.DisconnectionMenuItem;
 import by.makedon.client.view.menuitem.CheckMenuItem;
@@ -10,10 +10,10 @@ import javax.swing.*;
 
 public class Menu {
     private JMenu menu = new JMenu();
-    private Controller controller;
+    private ClientController clientController;
 
-    public void setController(Controller controller) {
-        this.controller = controller;
+    public void setClientController(ClientController clientController) {
+        this.clientController = clientController;
     }
 
     public void set() {
@@ -32,21 +32,21 @@ public class Menu {
 
     private void addConnectionMenuItem() {
         ConnectionMenuItem menuItem = new ConnectionMenuItem();
-        menuItem.setController(controller);
+        menuItem.setClientController(clientController);
         menuItem.set();
         menu.add(menuItem.getConnectionMenuItem());
     }
 
     private void addDisconnectionMenuItem() {
         DisconnectionMenuItem menuItem = new DisconnectionMenuItem();
-        menuItem.setController(controller);
+        menuItem.setClientController(clientController);
         menuItem.set();
         menu.add(menuItem.getDisconnectionMenuItem());
     }
 
     private void addCheckMenuItem() {
         CheckMenuItem menuItem = new CheckMenuItem();
-        menuItem.setController(controller);
+        menuItem.setClientController(clientController);
         menuItem.set();
         menu.add(menuItem.getCheckMenuItem());
     }
