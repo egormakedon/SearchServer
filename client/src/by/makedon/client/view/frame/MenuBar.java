@@ -1,4 +1,4 @@
-package by.makedon.client.frameEntity;
+package by.makedon.client.view.frame;
 
 import javax.swing.*;
 import java.awt.*;

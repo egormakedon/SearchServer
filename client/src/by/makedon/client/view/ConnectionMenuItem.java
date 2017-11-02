@@ -1,4 +1,4 @@
-package by.makedon.client.menuItem;
+package by.makedon.client.view;
 
 import by.makedon.client.controller.Controller;
 import by.makedon.client.dialog.ConnectionDialog;

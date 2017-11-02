@@ -34,3 +34,5 @@
 2017-10-15 20:11:13.254 [AWT-EventQueue-0] ERROR by.makedon.client.dialog.ConnectionDialog - Invalid ip: adqdq
 2017-10-15 20:13:47.149 [main] INFO  by.makedon.client.main.Main - kek
 2017-10-29 03:08:18.870 [AWT-EventQueue-0] INFO  by.makedon.client.model.Client - Client connected
+2017-10-29 14:52:21.482 [AWT-EventQueue-0] INFO  by.makedon.client.model.Client - Client connected
+2017-10-29 14:52:30.372 [AWT-EventQueue-0] INFO  by.makedon.client.dialog.DisconnectionDialog - Client disconnected

@@ -11,17 +11,28 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class SearchServer implements Runnable {
     private final int PORT;
     private ServerSocket ss;
     private boolean isServerRun;
     private SocketStore socketStore;
+    private Timer timer;
     static Logger logger = LogManager.getLogger(SearchServer.class);
 
     {
         PORT = 9000;
         socketStore = SocketStore.getInstance();
+    }
+
+    class ClearSocketStoreTimer extends TimerTask {
+        @Override
+        public void run() {
+            SocketStoreManager socketStoreManager = new SocketStoreManager();
+            socketStoreManager.clearStore(socketStore);
+        }
     }
 
     @Override
@@ -30,31 +41,37 @@ public class SearchServer implements Runnable {
             logger.log(Level.INFO,"searchserver has already run");
             return;
         }
+
         logger.log(Level.INFO, "searchserver was run");
         isServerRun = true;
 
-        try {
-            createServerSocket();
-        } catch (ServerException e) {
-            logger.log(Level.ERROR, e);
-        }
+        final long DELAY = 300_000;
+        timer = new Timer();
+        timer.schedule(new ClearSocketStoreTimer(), DELAY);
 
         try {
+            createServerSocket();
             createClientSocket();
         } catch (ServerException e) {
             logger.log(Level.ERROR, e);
+        } finally {
+            try {
+                clearSocketStore();
+                closeServerSocket();
+                timer.cancel();
+            } catch (ServerException e) {
+                logger.log(Level.ERROR, e);
+            }
         }
     }
 
-    public void stopServer() throws ServerException {
-        if (!isServerRun) {
+    public void stopServer() {
+        if (isServerRun) {
+            isServerRun = false;
+            logger.log(Level.INFO, "searchserver was stopped");
+        } else {
             logger.log(Level.INFO,"searchserver has already stopped");
-            return;
         }
-        logger.log(Level.INFO, "searchserver was stopped");
-        isServerRun = false;
-        closeClientSocket();
-        closeServerSocket();
     }
 
     private void createServerSocket() throws ServerException {
@@ -79,7 +96,7 @@ public class SearchServer implements Runnable {
         }
     }
 
-    private void closeClientSocket() throws ServerException {
+    private void clearSocketStore() throws ServerException {
         SocketStoreManager socketStoreManager = new SocketStoreManager();
         socketStoreManager.closeSockets(socketStore);
         socketStoreManager.clearStore(socketStore);
@@ -87,8 +104,9 @@ public class SearchServer implements Runnable {
 
     private void closeServerSocket() throws ServerException {
         try {
-            ss.close();
-            ss = null;
+            if (ss != null) {
+                ss.close();
+            }
         } catch (IOException e) {
             throw new ServerException("ServerSocket io exception", e);
         }

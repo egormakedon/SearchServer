@@ -2,7 +2,7 @@ package by.makedon.client.main;
 
 import by.makedon.client.controller.Controller;
 import by.makedon.client.model.Client;
-import by.makedon.client.frameEntity.MainFrame;
+import by.makedon.client.view.frame.MainFrame;
 import by.makedon.client.model.ServerData;
 
 public class Main {
