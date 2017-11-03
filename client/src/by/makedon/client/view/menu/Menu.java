@@ -1,7 +1,6 @@
 package by.makedon.client.view.menu;
 
 import by.makedon.client.controller.ClientController;
-import by.makedon.client.view.menuitem.ExitMenuItem;
 import by.makedon.client.view.menuitem.DisconnectionMenuItem;
 import by.makedon.client.view.menuitem.CheckMenuItem;
 import by.makedon.client.view.menuitem.ConnectionMenuItem;
@@ -22,8 +21,6 @@ public class Menu {
         addConnectionMenuItem();
         addDisconnectionMenuItem();
         addCheckMenuItem();
-        menu.addSeparator();
-        addExitMenuItem();
     }
 
     public JMenu getMenu() {
@@ -46,11 +43,5 @@ public class Menu {
         CheckMenuItem menuItem = new CheckMenuItem(clientController);
         menuItem.set();
         menu.add(menuItem.getCheckMenuItem());
-    }
-
-    private void addExitMenuItem() {
-        ExitMenuItem menuItem = new ExitMenuItem(clientController);
-        menuItem.set();
-        menu.add(menuItem.getExitMenuItem());
     }
 }

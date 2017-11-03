@@ -3,6 +3,8 @@ package by.makedon.client.controller;
 import by.makedon.client.exception.WrongConnectionException;
 import by.makedon.client.validator.SocketParamsValidator;
 
+import java.util.List;
+
 public class ClientController {
     private ClientSocketProcessor clientSocketProcessor;
 
@@ -29,19 +31,15 @@ public class ClientController {
         return clientSocketProcessor.closeClientSocket();
     }
 
-    public String[] addInfToCheckDialog() {
-        String[] strings = new String[3];
-        final String RED = "255 0 0";
-        final String GREEN = "0 255 0";
-        if (clientSocketInfo.isConnection()) {
-            strings[0] = clientSocketInfo.getIp();
-            strings[1] = Integer.toString(clientSocketInfo.getPort());
-            strings[2] = GREEN;
+    public List<String> getConnectionInfo() {
+        List<String> connectionInfoList = clientSocketProcessor.getConnectionInfo();
+        if (clientSocketProcessor.isConnection()) {
+            final String TRUE = "TRUE";
+            connectionInfoList.add(TRUE);
         } else {
-            strings[0] = "";
-            strings[1] = "";
-            strings[2] = RED;
+            final String FALSE = "FALSE";
+            connectionInfoList.add(FALSE);
         }
-        return strings;
+        return connectionInfoList;
     }
 }

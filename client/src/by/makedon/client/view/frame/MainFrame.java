@@ -19,7 +19,7 @@ public class MainFrame {
     }
 
     public void set() {
-        frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize();
         addElements();
     }
@@ -39,8 +39,8 @@ public class MainFrame {
 
     private void addElements() {
         addMenuBar();
-        addSearchPanel();
-        addTablePanel();
+        //addSearchPanel();
+        //addTablePanel();
     }
 
     private void addMenuBar() {

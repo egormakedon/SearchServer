@@ -8,21 +8,21 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CheckMenuItem {
-    private JMenuItem menuItem = new JMenuItem();
+    private JMenuItem menuItem;
     private ClientController clientController;
 
-    public void setClientController(ClientController clientController) {
+    public CheckMenuItem(ClientController clientController) {
+        final String TITLE = "<html><font style=’italic’ size = 4>" + "Check connection status..." + "</html>";
+        menuItem = new JMenuItem(TITLE);
         this.clientController = clientController;
     }
 
     public void set() {
-        setTitle();
+        addDialog();
     }
 
-    private void setTitle() {
-        final String TITLE = "<html><font style=’italic’ size = 4>" + "Check connection status..." + "</html>";
-        menuItem.setText(TITLE);
-        addDialog();
+    public JMenuItem getCheckMenuItem() {
+        return menuItem;
     }
 
     private void addDialog() {
@@ -30,15 +30,10 @@ public class CheckMenuItem {
             @Override
             public void actionPerformed(ActionEvent e) {
                 final String DIALOG_TITLE = "Check connection status...";
-                CheckDialog checkDialog = new CheckDialog(DIALOG_TITLE);
+                CheckDialog checkDialog = new CheckDialog(DIALOG_TITLE, clientController);
                 checkDialog.set();
-                checkDialog.setConnInfPanel(clientController.addInfToCheckDialog());
                 checkDialog.show();
             }
         });
-    }
-
-    public JMenuItem getCheckMenuItem() {
-        return menuItem;
     }
 }

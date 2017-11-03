@@ -1,36 +1,60 @@
 package by.makedon.client.view.dialog;
 
+import by.makedon.client.controller.ClientController;
+
 import javax.swing.*;
 import java.awt.*;
+import java.util.List;
 
 public class CheckDialog extends Dialog {
-    private JLabel ipLabel = new JLabel();
-    private JLabel portLabel = new JLabel();
-    private JLabel connectionLabel = new JLabel();
+    private ClientController clientController;
+    private JButton printButton;
+    private JButton saveButton;
 
-    public CheckDialog(String TITLE) {
+    public CheckDialog(String TITLE, ClientController clientController) {
         super(TITLE);
+        this.clientController = clientController;
+        printButton = new JButton("print session");
+        saveButton = new JButton("save session");
     }
+
     public void set() {
         setSize();
         setDialog();
-        addConnectionInformationPanel();
+        addElements();
     }
-    private void addConnectionInformationPanel() {
-        JPanel panel = createConnInfPanel();
-        JLabel ip = new JLabel("<html><center>ip:</html>");
-        JLabel port = new JLabel("<html><center>port:</html>");
-        JLabel connection = new JLabel("<html><center>connection:</html>");
+
+    private void addElements() {
+        addConnectionInfoPanel();
+    }
+
+    private void addConnectionInfoPanel() {
+        JPanel panel = createConnectionInfoPanel();
+        List<String> connectionInfoList = clientController.getConnectionInfo();
+
+        JLabel ip;
+        JLabel port;
+        JLabel connection;
+        if (connectionInfoList.get(2).equals("TRUE")) {
+            ip = new JLabel("<html><center>ip: " + connectionInfoList.get(0) +"</html>");
+            port = new JLabel("<html><center>port: " + connectionInfoList.get(1) +"</html>");
+            connection = new JLabel();
+            connection.setBackground(Color.GREEN);
+        } else {
+            ip = new JLabel("<html><center>ip:</html>");
+            port = new JLabel("<html><center>port:</html>");
+            connection = new JLabel();
+            connection.setBackground(Color.RED);
+        }
+
         panel.add(ip);
-        panel.add(ipLabel);
         panel.add(port);
-        panel.add(portLabel);
+        connection.setOpaque(true);
         panel.add(connection);
-        connectionLabel.setOpaque(true);
-        panel.add(connectionLabel);
         dialog.add(panel, BorderLayout.NORTH);
     }
-    private JPanel createConnInfPanel() {
+
+    private JPanel createConnectionInfoPanel() {
         JPanel panel = new JPanel();
 
         final int ROWS = 1;
@@ -43,15 +67,4 @@ public class CheckDialog extends Dialog {
         panel.setSize(new Dimension(WIDTH,HEIGHT));
         return panel;
     }
-    public void setConnInfPanel(String[] strings) {
-        ipLabel.setText(strings[0]);
-        portLabel.setText(strings[1]);
-        String[] color = parseString(strings[2]);
-        connectionLabel.setBackground(new Color(Integer.parseInt(color[0]), Integer.parseInt(color[1]), Integer.parseInt(color[2])));
-    }
-    private String[] parseString(String string) {
-        return string.split("\\s");
-    }
-
-
 }
