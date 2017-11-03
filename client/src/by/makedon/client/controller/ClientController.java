@@ -1,9 +1,13 @@
 package by.makedon.client.controller;
 
+import by.makedon.client.criteria.Criteria;
 import by.makedon.client.exception.WrongConnectionException;
+import by.makedon.client.exception.WrongDataInputException;
+import by.makedon.client.validator.CriteriaValidator;
 import by.makedon.client.validator.SocketParamsValidator;
 
 import java.util.List;
+import java.util.Map;
 
 public class ClientController {
     private ClientSocketProcessor clientSocketProcessor;
@@ -41,5 +45,14 @@ public class ClientController {
             connectionInfoList.add(FALSE);
         }
         return connectionInfoList;
+    }
+
+    public void sendQuery(Map<Criteria, String> criteriaMap) throws WrongDataInputException {
+        CriteriaValidator criteriaValidator = new CriteriaValidator();
+        if (criteriaValidator.validationCriteria(criteriaMap)) {
+            //create query and send to server
+        } else {
+            throw new WrongDataInputException();
+        }
     }
 }

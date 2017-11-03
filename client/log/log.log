@@ -38,3 +38,5 @@
 2017-10-29 14:52:30.372 [AWT-EventQueue-0] INFO  by.makedon.clientSocket.view.dialog.DisconnectionDialog - Client disconnected
 2017-11-03 02:59:16.978 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.DisconnectionDialog - ClientSocket haven't connected yet
 2017-11-03 02:59:21.398 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.ConnectionDialog - by.makedon.client.exception.WrongConnectionException: Invalid ip: 
+2017-11-03 06:31:12.228 [AWT-EventQueue-0] ERROR makedon.client.view.searchelement.SearchButton - Wrong Input Data
+2017-11-03 06:31:26.678 [AWT-EventQueue-0] ERROR makedon.client.view.searchelement.SearchButton - Wrong Input Data
