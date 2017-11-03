@@ -47,12 +47,15 @@ public class ClientController {
         return connectionInfoList;
     }
 
-    public void sendQuery(Map<Criteria, String> criteriaMap) throws WrongDataInputException {
+    public void sendQuery(Map<Criteria, String> criteriaMap) throws WrongDataInputException, WrongConnectionException {
         CriteriaValidator criteriaValidator = new CriteriaValidator();
-        if (criteriaValidator.validationCriteria(criteriaMap)) {
-            //create query and send to server
-        } else {
+        if (!criteriaValidator.validationCriteria(criteriaMap)) {
             throw new WrongDataInputException();
         }
+        if (!clientSocketProcessor.isConnection()) {
+            throw new WrongConnectionException("Connection didn't set");
+        }
+
+        ////query
     }
 }

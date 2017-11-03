@@ -3,6 +3,7 @@ package by.makedon.client.view.searchelement;
 import by.makedon.client.controller.ClientController;
 import by.makedon.client.controller.ClientSocketProcessor;
 import by.makedon.client.criteria.Criteria;
+import by.makedon.client.exception.WrongConnectionException;
 import by.makedon.client.exception.WrongDataInputException;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -45,6 +46,9 @@ public class SearchButton {
                         "First and Last names begin with high register.\n" +
                         "Phone consists of 9 numbers");
                 logger.log(Level.ERROR, "Wrong Input Data");
+            } catch (WrongConnectionException e1) {
+                JOptionPane.showMessageDialog(null, "Client hasn't connected to Server");
+                logger.log(Level.ERROR, e1);
             }
         }
     }

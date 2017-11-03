@@ -40,3 +40,7 @@
 2017-11-03 02:59:21.398 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.ConnectionDialog - by.makedon.client.exception.WrongConnectionException: Invalid ip: 
 2017-11-03 06:31:12.228 [AWT-EventQueue-0] ERROR makedon.client.view.searchelement.SearchButton - Wrong Input Data
 2017-11-03 06:31:26.678 [AWT-EventQueue-0] ERROR makedon.client.view.searchelement.SearchButton - Wrong Input Data
+2017-11-03 06:49:37.085 [AWT-EventQueue-0] ERROR makedon.client.view.searchelement.SearchButton - by.makedon.client.exception.WrongConnectionException: Connection didn't set
+2017-11-03 06:49:40.276 [AWT-EventQueue-0] ERROR makedon.client.view.searchelement.SearchButton - by.makedon.client.exception.WrongConnectionException: Connection didn't set
+2017-11-03 06:49:42.320 [AWT-EventQueue-0] ERROR makedon.client.view.searchelement.SearchButton - by.makedon.client.exception.WrongConnectionException: Connection didn't set
+2017-11-03 16:09:25.367 [AWT-EventQueue-0] ERROR makedon.client.view.searchelement.SearchButton - by.makedon.client.exception.WrongConnectionException: Connection didn't set

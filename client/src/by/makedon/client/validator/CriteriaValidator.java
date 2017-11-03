@@ -18,6 +18,8 @@ public class CriteriaValidator {
                 break;
             }
         }
+
+        if (result) criteriaMap.clear();
         return result;
     }
 

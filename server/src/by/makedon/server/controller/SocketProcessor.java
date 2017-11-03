@@ -1,4 +1,4 @@
-package by.makedon.server.socket;
+package by.makedon.server.controller;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -16,17 +16,19 @@ public class SocketProcessor implements Runnable {
 
     public SocketProcessor(Socket socket) {
         this.socket = socket;
-        try {
-            is = socket.getInputStream();
-        } catch (IOException e) {
-            logger.log(Level.WARN, e);
-        }
         isSocketRun = true;
     }
 
     @Override
     public void run() {
-        while(isSocketRun) {
+        try {
+            is = socket.getInputStream();
+            while (isSocketRun) {
+
+            }
+        } catch (IOException e) {
+            logger.log(Level.WARN, e);
+        } finally {
 
         }
     }

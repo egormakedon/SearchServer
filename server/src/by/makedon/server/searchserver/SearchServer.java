@@ -1,7 +1,7 @@
 package by.makedon.server.searchserver;
 
 import by.makedon.server.exception.ServerException;
-import by.makedon.server.socket.SocketProcessor;
+import by.makedon.server.controller.SocketProcessor;
 import by.makedon.server.socket.SocketStore;
 import by.makedon.server.socket.SocketStoreManager;
 import org.apache.logging.log4j.Level;
