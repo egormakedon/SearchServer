@@ -1,7 +1,6 @@
 package by.makedon.client.view.searchelement;
 
 import by.makedon.client.controller.ClientController;
-import by.makedon.client.controller.ClientSocketProcessor;
 import by.makedon.client.criteria.Criteria;
 import by.makedon.client.exception.WrongConnectionException;
 import by.makedon.client.exception.WrongDataInputException;

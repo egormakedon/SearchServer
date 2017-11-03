@@ -19,7 +19,6 @@ public class SearchServer implements Runnable {
     private ServerSocket ss;
     private boolean isServerRun;
     private SocketStore socketStore;
-    private Timer timer;
     static Logger logger = LogManager.getLogger(SearchServer.class);
 
     {
@@ -45,8 +44,8 @@ public class SearchServer implements Runnable {
         logger.log(Level.INFO, "searchserver was run");
         isServerRun = true;
 
-        final long DELAY = 300_000;
-        timer = new Timer();
+        final long DELAY = 60_000;
+        Timer timer = new Timer();
         timer.schedule(new ClearSocketStoreTimer(), DELAY);
 
         try {
@@ -55,10 +54,14 @@ public class SearchServer implements Runnable {
         } catch (ServerException e) {
             logger.log(Level.ERROR, e);
         } finally {
+            timer.cancel();
             try {
                 clearSocketStore();
+            } catch (ServerException e) {
+                logger.log(Level.ERROR, e);
+            }
+            try {
                 closeServerSocket();
-                timer.cancel();
             } catch (ServerException e) {
                 logger.log(Level.ERROR, e);
             }
@@ -99,13 +102,16 @@ public class SearchServer implements Runnable {
     private void clearSocketStore() throws ServerException {
         SocketStoreManager socketStoreManager = new SocketStoreManager();
         socketStoreManager.closeSockets(socketStore);
+        logger.log(Level.INFO, "All sockets have closed");
         socketStoreManager.clearStore(socketStore);
+        logger.log(Level.INFO, "SocketStore have cleared");
     }
 
     private void closeServerSocket() throws ServerException {
         try {
-            if (ss != null) {
+            if (ss != null && !ss.isClosed()) {
                 ss.close();
+                logger.log(Level.INFO, "ServerSocket have closed");
             }
         } catch (IOException e) {
             throw new ServerException("ServerSocket io exception", e);

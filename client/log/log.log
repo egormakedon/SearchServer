@@ -44,3 +44,15 @@
 2017-11-03 06:49:40.276 [AWT-EventQueue-0] ERROR makedon.client.view.searchelement.SearchButton - by.makedon.client.exception.WrongConnectionException: Connection didn't set
 2017-11-03 06:49:42.320 [AWT-EventQueue-0] ERROR makedon.client.view.searchelement.SearchButton - by.makedon.client.exception.WrongConnectionException: Connection didn't set
 2017-11-03 16:09:25.367 [AWT-EventQueue-0] ERROR makedon.client.view.searchelement.SearchButton - by.makedon.client.exception.WrongConnectionException: Connection didn't set
+2017-11-03 16:40:04.479 [AWT-EventQueue-0] ERROR makedon.client.view.searchelement.SearchButton - by.makedon.client.exception.WrongConnectionException: Connection didn't set
+2017-11-03 16:42:50.393 [AWT-EventQueue-0] ERROR makedon.client.view.searchelement.SearchButton - by.makedon.client.exception.WrongConnectionException: Connection didn't set
+2017-11-03 16:42:56.655 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.ConnectionDialog - by.makedon.client.exception.WrongConnectionException: Invalid ip: 
+2017-11-03 16:43:08.864 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.ConnectionDialog - by.makedon.client.exception.WrongConnectionException: Connection didn't set
+2017-11-03 16:43:25.262 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.DisconnectionDialog - ClientSocket haven't connected yet
+2017-11-03 16:43:26.602 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.DisconnectionDialog - ClientSocket haven't connected yet
+2017-11-03 16:43:29.884 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.ConnectionDialog - by.makedon.client.exception.WrongConnectionException: Invalid ip: 
+2017-11-03 22:48:39.133 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.ConnectionDialog - by.makedon.client.exception.WrongConnectionException: Connection didn't set
+2017-11-03 22:48:58.370 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.ConnectionDialog - by.makedon.client.exception.WrongConnectionException: Connection didn't set
+2017-11-03 22:49:54.114 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.ConnectionDialog - by.makedon.client.exception.WrongConnectionException: Connection didn't set
+2017-11-03 23:14:16.115 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-03 23:14:55.209 [AWT-EventQueue-0] INFO  makedon.client.view.dialog.DisconnectionDialog - ClientSocket disconnected

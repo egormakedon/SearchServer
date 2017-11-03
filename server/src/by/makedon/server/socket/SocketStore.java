@@ -5,11 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SocketStore {
-    private List<Socket> socketList;
-
-    {
-        socketList = new ArrayList<Socket>();
-    }
+    private List<Socket> socketList = new ArrayList<Socket>();
 
     private SocketStore() {}
 
@@ -25,7 +21,7 @@ public class SocketStore {
         socketList.add(socket);
     }
 
-    public List<Socket> getSocketList() {
+    List<Socket> getSocketList() {
         return socketList;
     }
 }
