@@ -2,8 +2,7 @@ package by.makedon.client.view.frame;
 
 import by.makedon.client.controller.ClientController;
 import by.makedon.client.view.panel.MenuBar;
-import by.makedon.client.view.panel.InformationPanel;
-import by.makedon.client.view.panel.PanelForSearchElements;
+import by.makedon.client.view.panel.SearchPanel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -39,7 +38,7 @@ public class MainFrame {
 
     private void addElements() {
         addMenuBar();
-        //addSearchPanel();
+        addSearchPanel();
         //addTablePanel();
     }
 
@@ -49,12 +48,12 @@ public class MainFrame {
         frame.setJMenuBar(menuBar.getMenuBar());
     }
 
-//    private void addSearchPanel() {
-//        PanelForSearchElements panel = new PanelForSearchElements();
-//        panel.set();
-//        fr.add(panel.getPanel(), BorderLayout.NORTH);
-//    }
-//
+    private void addSearchPanel() {
+        SearchPanel panel = new SearchPanel(clientController);
+        panel.set();
+        frame.add(panel.getPanel(), BorderLayout.NORTH);
+    }
+
 //    private void addTablePanel() {
 //        InformationPanel panel = new InformationPanel();
 //        fr.add(panel.getInformationPanel(), BorderLayout.CENTER);

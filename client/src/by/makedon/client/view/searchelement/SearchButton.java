@@ -1,34 +1,38 @@
 package by.makedon.client.view.searchelement;
 
+import by.makedon.client.controller.ClientController;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class SearchButton {
-    private JButton searchButton = new JButton();
+    private JButton searchButton;
+    private ClientController clientController;
+    private SearchCriteria searchCriteria;
+
+    public SearchButton(ClientController clientController, SearchCriteria searchCriteria) {
+        final String TITLE = "search";
+        searchButton = new JButton(TITLE);
+        this.clientController = clientController;
+        this.searchCriteria = searchCriteria;
+    }
+
+    class SearchAction implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+        }
+    }
 
     public void set() {
-        setTitle();
-        setSize();
-        setLocation();
         setSearchButton();
+        addListener();
     }
 
-    private void setTitle() {
-        final String SEARCH = new String("Search");
-        searchButton.setText(SEARCH);
-    }
-
-    private void setSize() {
-        final int WIDTH = 100;
-        final int HEIGHT = 27;
-        searchButton.setSize(new Dimension(WIDTH, HEIGHT));
-        searchButton.setPreferredSize(new Dimension(WIDTH, HEIGHT));
-    }
-
-    private void setLocation() {
-        final int X = 1100;
-        final int Y = 25;
-        searchButton.setLocation(X, Y);
+    public JButton getSearchButton() {
+        return searchButton;
     }
 
     private void setSearchButton() {
@@ -37,7 +41,7 @@ public class SearchButton {
         searchButton.setBackground(Color.WHITE);
     }
 
-    public JButton getSearchButton() {
-        return searchButton;
+    private void addListener() {
+        searchButton.addActionListener(new SearchAction());
     }
 }

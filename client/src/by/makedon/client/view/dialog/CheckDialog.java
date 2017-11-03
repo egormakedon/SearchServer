@@ -4,6 +4,8 @@ import by.makedon.client.controller.ClientController;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.List;
 
 public class CheckDialog extends Dialog {
@@ -24,12 +26,43 @@ public class CheckDialog extends Dialog {
         addElements();
     }
 
-    private void addElements() {
-        addConnectionInfoPanel();
+    class PrintAction implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            final String DIALOG_TITLE = "Session...";
+            SessionDialog sessionDialog = new SessionDialog(DIALOG_TITLE, clientController);
+            sessionDialog.set();
+            sessionDialog.show();
+        }
     }
 
-    private void addConnectionInfoPanel() {
+    class SaveAction implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+        }
+    }
+
+    @Override
+    void setSize() {
+        final int WIDTH = 300;
+        final int HEIGHT = 300;
+        dialog.setSize(new Dimension(WIDTH, HEIGHT));
+        dialog.setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        dialog.setResizable(false);
+    }
+
+    private void addElements() {
         JPanel panel = createConnectionInfoPanel();
+
+        addConnectionInfoPanel(panel);
+        addPrintButton(panel);
+        addSaveButton(panel);
+
+        dialog.add(panel);
+    }
+
+    private void addConnectionInfoPanel(JPanel panel) {
         List<String> connectionInfoList = clientController.getConnectionInfo();
 
         JLabel ip;
@@ -51,18 +84,27 @@ public class CheckDialog extends Dialog {
         panel.add(port);
         connection.setOpaque(true);
         panel.add(connection);
-        dialog.add(panel, BorderLayout.NORTH);
+    }
+
+    private void addPrintButton(JPanel panel) {
+        printButton.addActionListener(new PrintAction());
+        panel.add(printButton);
+    }
+
+    private void addSaveButton(JPanel panel) {
+        saveButton.addActionListener(new SaveAction());
+        panel.add(saveButton);
     }
 
     private JPanel createConnectionInfoPanel() {
         JPanel panel = new JPanel();
 
-        final int ROWS = 1;
-        final int COLS = 6;
+        final int ROWS = 5;
+        final int COLS = 1;
         panel.setLayout(new GridLayout(ROWS, COLS));
 
-        final int WIDTH = 600;
-        final int HEIGHT = 35;
+        final int WIDTH = 300;
+        final int HEIGHT = 300;
         panel.setPreferredSize(new Dimension(WIDTH,HEIGHT));
         panel.setSize(new Dimension(WIDTH,HEIGHT));
         return panel;
