@@ -52,3 +52,22 @@
 2017-11-03 23:13:50.983 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
 2017-11-03 23:14:16.109 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - new client /192.168.100.8 connected
 2017-11-03 23:15:47.952 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - searchserver was stopped
+2017-11-04 21:31:21.957 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - searchserver was run
+2017-11-04 21:31:21.974 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-11-04 21:31:50.838 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - new client /192.168.100.8 connected
+2017-11-04 21:36:48.699 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - new client /192.168.100.8 connected
+2017-11-04 21:41:00.259 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - searchserver was stopped
+2017-11-04 21:44:50.279 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - searchserver was run
+2017-11-04 21:44:50.283 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-11-04 21:45:06.115 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - new client /192.168.100.8 connected
+2017-11-04 21:45:47.093 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - searchserver was stopped
+2017-11-04 21:47:21.366 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - searchserver was run
+2017-11-04 21:47:21.372 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-11-04 21:47:45.867 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - new client /192.168.100.8 connected
+2017-11-04 22:01:28.993 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - searchserver was run
+2017-11-04 22:01:28.998 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-11-04 22:01:50.438 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - new client /192.168.100.8 connected
+2017-11-04 22:02:40.813 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - searchserver was stopped
+2017-11-04 22:04:20.982 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - searchserver was run
+2017-11-04 22:04:20.987 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-11-04 22:04:39.702 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - new client /192.168.100.8 connected

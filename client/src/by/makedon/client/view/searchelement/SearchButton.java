@@ -40,6 +40,7 @@ public class SearchButton {
 
             try {
                 clientController.sendQuery(criteriaMap);
+                /////////////
             } catch (WrongDataInputException e1) {
                 JOptionPane.showMessageDialog(null, "Wrong Input Data.\nText fields have 30 sym maximum.\n" +
                         "First and Last names begin with high register.\n" +

@@ -2,25 +2,29 @@ package by.makedon.client.validator;
 
 import by.makedon.client.criteria.Criteria;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
 public class CriteriaValidator {
     public boolean validationCriteria(Map<Criteria, String> criteriaMap) {
-        return validationOnEmptyFields(criteriaMap) || validationAllCriteria(criteriaMap);
+        removeEmptyFields(criteriaMap);
+        return criteriaMap.isEmpty() || validationAllCriteria(criteriaMap);
     }
 
-    private boolean validationOnEmptyFields(Map<Criteria, String> criteriaMap) {
-        boolean result = true;
-        for (Map.Entry entry : criteriaMap.entrySet()) {
-            if (!entry.getKey().toString().equals(entry.getValue().toString().toUpperCase())) {
-                result = false;
-                break;
+    private void removeEmptyFields(Map<Criteria, String> criteriaMap) {
+        List<Criteria> keyList = new ArrayList<Criteria>();
+        for (Map.Entry<Criteria, String> entry : criteriaMap.entrySet()) {
+            if (entry.getKey().toString().equals(entry.getValue().toUpperCase())) {
+                keyList.add(entry.getKey());
             }
         }
-
-        if (result) criteriaMap.clear();
-        return result;
+        if (!keyList.isEmpty()) {
+            for (Criteria key : keyList) {
+                criteriaMap.remove(key);
+            }
+        }
     }
 
     private boolean validationAllCriteria(Map<Criteria, String> criteriaMap) {

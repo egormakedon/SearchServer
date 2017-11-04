@@ -1,5 +1,6 @@
 package by.makedon.client.controller;
 
+import by.makedon.client.creator.QueryCreator;
 import by.makedon.client.criteria.Criteria;
 import by.makedon.client.exception.WrongConnectionException;
 import by.makedon.client.exception.WrongDataInputException;
@@ -56,6 +57,8 @@ public class ClientController {
             throw new WrongConnectionException("Connection didn't set");
         }
 
-        ////query
+        QueryCreator queryCreator = new QueryCreator();
+        String query = queryCreator.create(criteriaMap);
+        ////
     }
 }
