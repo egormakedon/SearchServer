@@ -4,6 +4,7 @@ import by.makedon.client.creator.QueryCreator;
 import by.makedon.client.criteria.Criteria;
 import by.makedon.client.exception.WrongConnectionException;
 import by.makedon.client.exception.WrongDataInputException;
+import by.makedon.client.model.PersonList;
 import by.makedon.client.validator.CriteriaValidator;
 import by.makedon.client.validator.SocketParamsValidator;
 
@@ -12,9 +13,11 @@ import java.util.Map;
 
 public class ClientController {
     private ClientSocketProcessor clientSocketProcessor;
+    private PersonList personList;
 
-    public ClientController(ClientSocketProcessor clientSocketProcessor) {
+    public ClientController(ClientSocketProcessor clientSocketProcessor, PersonList personList) {
         this.clientSocketProcessor = clientSocketProcessor;
+        this.personList = personList;
     }
 
     public void connect(String ip, String port) throws WrongConnectionException {
@@ -48,17 +51,29 @@ public class ClientController {
         return connectionInfoList;
     }
 
-    public void sendQuery(Map<Criteria, String> criteriaMap) throws WrongDataInputException, WrongConnectionException {
+    public List<String> sendQuery(Map<Criteria, String> criteriaMap) throws WrongDataInputException, WrongConnectionException {
         CriteriaValidator criteriaValidator = new CriteriaValidator();
         if (!criteriaValidator.validationCriteria(criteriaMap)) {
-            throw new WrongDataInputException();
+            throw new WrongDataInputException("Wrong Input Data.\nText fields have 30 sym maximum.\n" +
+                    "First and Last names begin with high register.\n" +
+                    "Phone consists of 9 numbers");
         }
         if (!clientSocketProcessor.isConnection()) {
-            throw new WrongConnectionException("Connection didn't set");
+            throw new WrongConnectionException("Client hasn't connected to Server");
         }
 
         QueryCreator queryCreator = new QueryCreator();
-        String query = queryCreator.create(criteriaMap);
-        ////
+        final String QUERY = queryCreator.create(criteriaMap);
+        return clientSocketProcessor.findPersonInformation(QUERY);
+    }
+
+    public void refreshTable(List<String> personInformation) {
+        refreshPersonList(personInformation);
+        ///////refreshJTABLE
+    }
+
+    private void refreshPersonList(List<String> personInformation) {
+        personList.clear();
+        personList.add(personInformation);
     }
 }

@@ -13,6 +13,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class SearchButton {
@@ -39,15 +40,14 @@ public class SearchButton {
             criteriaMap.put(Criteria.SKYPE, searchCriteria.getSkype().getText());
 
             try {
-                clientController.sendQuery(criteriaMap);
-                /////////////
-            } catch (WrongDataInputException e1) {
-                JOptionPane.showMessageDialog(null, "Wrong Input Data.\nText fields have 30 sym maximum.\n" +
-                        "First and Last names begin with high register.\n" +
-                        "Phone consists of 9 numbers");
-                logger.log(Level.ERROR, "Wrong Input Data");
-            } catch (WrongConnectionException e1) {
-                JOptionPane.showMessageDialog(null, "Client hasn't connected to Server");
+                List<String> personInformation = clientController.sendQuery(criteriaMap);
+                if (!personInformation.isEmpty()) {
+                    clientController.refreshTable(personInformation);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Information haven't found");
+                }
+            } catch (WrongDataInputException | WrongConnectionException e1) {
+                JOptionPane.showMessageDialog(null, e1.getMessage());
                 logger.log(Level.ERROR, e1);
             }
         }
