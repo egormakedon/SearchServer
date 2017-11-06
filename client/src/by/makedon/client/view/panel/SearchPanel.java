@@ -1,6 +1,7 @@
 package by.makedon.client.view.panel;
 
 import by.makedon.client.controller.ClientController;
+import by.makedon.client.table.Table;
 import by.makedon.client.view.searchelement.SearchButton;
 import by.makedon.client.view.searchelement.SearchCriteria;
 
@@ -11,11 +12,13 @@ public class SearchPanel {
     private JPanel panel;
     private ClientController clientController;
     private SearchCriteria searchCriteria;
+    private Table table;
 
-    public SearchPanel(ClientController clientController) {
+    public SearchPanel(ClientController clientController, Table table) {
         panel = new JPanel();
         searchCriteria = new SearchCriteria();
         this.clientController = clientController;
+        this.table = table;
     }
 
     public void set() {
@@ -56,7 +59,7 @@ public class SearchPanel {
     }
 
     private void addSearchButton() {
-        SearchButton searchButton = new SearchButton(clientController, searchCriteria);
+        SearchButton searchButton = new SearchButton(clientController, searchCriteria, table);
         searchButton.set();
         panel.add(searchButton.getSearchButton());
     }

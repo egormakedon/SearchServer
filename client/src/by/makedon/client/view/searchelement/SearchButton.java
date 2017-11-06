@@ -4,6 +4,7 @@ import by.makedon.client.controller.ClientController;
 import by.makedon.client.criteria.Criteria;
 import by.makedon.client.exception.WrongConnectionException;
 import by.makedon.client.exception.WrongDataInputException;
+import by.makedon.client.table.Table;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -20,13 +21,15 @@ public class SearchButton {
     private JButton searchButton;
     private ClientController clientController;
     private SearchCriteria searchCriteria;
+    private Table table;
     static Logger logger = LogManager.getLogger(SearchButton.class);
 
-    public SearchButton(ClientController clientController, SearchCriteria searchCriteria) {
+    public SearchButton(ClientController clientController, SearchCriteria searchCriteria, Table table) {
         final String TITLE = "search";
         searchButton = new JButton(TITLE);
         this.clientController = clientController;
         this.searchCriteria = searchCriteria;
+        this.table = table;
     }
 
     class SearchAction implements ActionListener {
@@ -42,7 +45,7 @@ public class SearchButton {
             try {
                 List<String> personInformation = clientController.sendQuery(criteriaMap);
                 if (!personInformation.isEmpty()) {
-                    clientController.refreshTable(personInformation);
+                    clientController.refreshTable(table, personInformation);
                 } else {
                     JOptionPane.showMessageDialog(null, "Information haven't found");
                 }

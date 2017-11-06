@@ -5,6 +5,8 @@ import by.makedon.client.criteria.Criteria;
 import by.makedon.client.exception.WrongConnectionException;
 import by.makedon.client.exception.WrongDataInputException;
 import by.makedon.client.model.PersonList;
+import by.makedon.client.parser.PersonInformationParser;
+import by.makedon.client.table.Table;
 import by.makedon.client.validator.CriteriaValidator;
 import by.makedon.client.validator.SocketParamsValidator;
 
@@ -67,13 +69,15 @@ public class ClientController {
         return clientSocketProcessor.findPersonInformation(QUERY);
     }
 
-    public void refreshTable(List<String> personInformation) {
-        refreshPersonList(personInformation);
-        ///////refreshJTABLE
-    }
-
-    private void refreshPersonList(List<String> personInformation) {
+    public void refreshTable(Table table, List<String> personInformation) {
+        table.clearTable();
         personList.clear();
         personList.add(personInformation);
+
+        PersonInformationParser parser = new PersonInformationParser();
+        for (String person : personInformation) {
+            table.addPersonInformation(parser.parse(person, " "));
+        }
+        table.getTable().revalidate();
     }
 }
