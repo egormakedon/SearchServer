@@ -100,3 +100,11 @@
 2017-11-06 00:24:48.269 [AWT-EventQueue-0] ERROR makedon.client.view.searchelement.SearchButton - by.makedon.client.exception.WrongConnectionException: Stream haven't opened
 2017-11-06 00:24:58.390 [AWT-EventQueue-0] INFO  makedon.client.view.dialog.DisconnectionDialog - ClientSocket disconnected
 2017-11-06 00:28:23.366 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-06 00:31:40.497 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-06 00:31:56.808 [AWT-EventQueue-0] INFO  makedon.client.view.dialog.DisconnectionDialog - ClientSocket disconnected
+2017-11-06 00:32:31.559 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-06 00:37:57.987 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-06 00:38:36.916 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-06 00:43:39.460 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-06 00:44:38.900 [AWT-EventQueue-0] INFO  makedon.client.view.dialog.DisconnectionDialog - ClientSocket disconnected
+2017-11-06 00:46:24.943 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected

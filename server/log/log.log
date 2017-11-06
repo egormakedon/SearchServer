@@ -90,3 +90,34 @@
 2017-11-06 00:28:23.364 [Thread-3] INFO  by.makedon.server.controller.SocketProcessor - Client /192.168.100.13 Thread have run
 2017-11-06 00:28:55.509 [Thread-3] WARN  by.makedon.server.controller.SocketProcessor - java.io.EOFException
 2017-11-06 00:28:55.509 [Thread-3] INFO  by.makedon.server.controller.SocketProcessor - Client /192.168.100.13 Thread have stopped
+2017-11-06 00:31:30.903 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - searchserver was run
+2017-11-06 00:31:30.906 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-11-06 00:31:40.493 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - new client /192.168.100.13 connected
+2017-11-06 00:31:40.494 [Thread-3] INFO  by.makedon.server.controller.SocketProcessor - Client /192.168.100.13 Thread have run
+2017-11-06 00:31:44.223 [Thread-3] WARN  by.makedon.server.controller.SocketProcessor - java.io.EOFException
+2017-11-06 00:31:44.223 [Thread-3] INFO  by.makedon.server.controller.SocketProcessor - Client /192.168.100.13 Thread have stopped
+2017-11-06 00:32:15.642 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - searchserver was run
+2017-11-06 00:32:15.647 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-11-06 00:32:31.554 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - new client /192.168.100.13 connected
+2017-11-06 00:32:31.557 [Thread-3] INFO  by.makedon.server.controller.SocketProcessor - Client /192.168.100.13 Thread have run
+2017-11-06 00:32:46.500 [Thread-3] WARN  by.makedon.server.controller.SocketProcessor - java.io.EOFException
+2017-11-06 00:32:46.500 [Thread-3] INFO  by.makedon.server.controller.SocketProcessor - Client /192.168.100.13 Thread have stopped
+2017-11-06 00:37:48.950 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - searchserver was run
+2017-11-06 00:37:48.955 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-11-06 00:37:57.982 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - new client /192.168.100.13 connected
+2017-11-06 00:37:57.985 [Thread-3] INFO  by.makedon.server.controller.SocketProcessor - Client /192.168.100.13 Thread have run
+2017-11-06 00:38:07.318 [Thread-3] WARN  by.makedon.server.controller.SocketProcessor - java.io.EOFException
+2017-11-06 00:38:07.318 [Thread-3] INFO  by.makedon.server.controller.SocketProcessor - Client /192.168.100.13 Thread have stopped
+2017-11-06 00:38:29.286 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - searchserver was run
+2017-11-06 00:38:29.289 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-11-06 00:38:36.910 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - new client /192.168.100.13 connected
+2017-11-06 00:38:36.914 [Thread-3] INFO  by.makedon.server.controller.SocketProcessor - Client /192.168.100.13 Thread have run
+2017-11-06 00:38:52.626 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - searchserver was stopped
+2017-11-06 00:42:41.628 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - searchserver was run
+2017-11-06 00:42:41.634 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-11-06 00:43:39.454 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - new client /192.168.100.13 connected
+2017-11-06 00:43:39.457 [Thread-3] INFO  by.makedon.server.controller.SocketProcessor - Client /192.168.100.13 Thread have run
+2017-11-06 00:46:12.871 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - searchserver was run
+2017-11-06 00:46:12.876 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - created new ServerSocket
+2017-11-06 00:46:24.939 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - new client /192.168.100.13 connected
+2017-11-06 00:46:24.941 [Thread-3] INFO  by.makedon.server.controller.SocketProcessor - Client /192.168.100.13 Thread have run

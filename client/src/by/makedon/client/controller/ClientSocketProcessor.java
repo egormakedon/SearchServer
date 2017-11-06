@@ -74,7 +74,7 @@ public class ClientSocketProcessor {
     List<String> findPersonInformation(final String QUERY) throws WrongConnectionException, WrongDataInputException {
         ObjectOutputStream objos = null;
         ObjectInputStream objis = null;
-        List<String> personInformation = null;
+        List<String> personInformation;
         try {
             OutputStream os = clientSocket.getClientSocket().getOutputStream();
             InputStream is = clientSocket.getClientSocket().getInputStream();
@@ -109,10 +109,6 @@ public class ClientSocketProcessor {
                 }
             }
         }
-        if (personInformation != null) {
-            return personInformation;
-        } else {
-            throw new WrongDataInputException("Have took wrong object");
-        }
+        return personInformation;
     }
 }
