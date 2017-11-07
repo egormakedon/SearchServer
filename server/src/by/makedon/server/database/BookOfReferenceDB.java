@@ -17,6 +17,7 @@ public class BookOfReferenceDB {
     public BookOfReferenceDB() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
+            logger.log(Level.INFO, "Set mysql driver");
         } catch (ClassNotFoundException e) {
             logger.log(Level.WARN, e);
         }
@@ -29,6 +30,7 @@ public class BookOfReferenceDB {
         List<String> personInformationList = new ArrayList<String>();
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            logger.log(Level.INFO, "Have opened connection to DB");
             statement = connection.createStatement();
             resultSet = statement.executeQuery(QUERY);
 
@@ -41,9 +43,9 @@ public class BookOfReferenceDB {
         } catch (SQLException e) {
             logger.log(Level.WARN, e);
         } finally {
-            if (connection != null) {
+            if (resultSet != null) {
                 try {
-                    connection.close();
+                    resultSet.close();
                 } catch (SQLException e) {
                     logger.log(Level.WARN, e);
                 }
@@ -55,9 +57,10 @@ public class BookOfReferenceDB {
                     logger.log(Level.WARN, e);
                 }
             }
-            if (resultSet != null) {
+            if (connection != null) {
                 try {
-                    resultSet.close();
+                    connection.close();
+                    logger.log(Level.INFO, "Have closed connection to DB");
                 } catch (SQLException e) {
                     logger.log(Level.WARN, e);
                 }
