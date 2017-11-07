@@ -41,9 +41,7 @@ public class DisconnectionDialog extends Dialog {
     class ButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (clientController.disconnect()) {
-                logger.log(Level.INFO,"ClientSocket disconnected");
-            } else {
+            if (!clientController.disconnect()) {
                 JOptionPane.showMessageDialog(dialog, "ClientSocket haven't connected yet");
                 logger.log(Level.ERROR,"ClientSocket haven't connected yet");
             }

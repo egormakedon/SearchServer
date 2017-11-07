@@ -1,5 +1,6 @@
 package by.makedon.server.controller;
 
+import by.makedon.server.session.ClientSession;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,11 +13,13 @@ import java.util.TimerTask;
 public class SocketProcessor implements Runnable {
     private Socket socket;
     private boolean isSocketRun;
+    private ClientSession clientSession;
     static Logger logger = LogManager.getLogger(SocketProcessor.class);
 
     public SocketProcessor(Socket socket) {
         this.socket = socket;
         isSocketRun = true;
+        clientSession = new ClientSession();
     }
 
 //    class CloseSocketTimer extends TimerTask {
@@ -38,6 +41,7 @@ public class SocketProcessor implements Runnable {
 //        final int DELAY = 1_000;
 //        Timer timer = new Timer();
 //        timer.schedule(new CloseSocketTimer(), DELAY);
+        clientSession.add("Connected to server");
 
         final String PERSON_INFORMATION_KEY = "PERSONINFORMATION";
         final String SESSION_KEY = "SESSION";
@@ -54,14 +58,16 @@ public class SocketProcessor implements Runnable {
                 final String KEY = (String) objis.readObject();
                 switch (KEY) {
                     case PERSON_INFORMATION_KEY:
+                        clientSession.add("Information request");
                         final String QUERY = (String) objis.readObject();
                         Controller controller = new Controller();
-                        objos.flush();
                         objos.writeObject(controller.findPersonInformation(QUERY));
                         objos.flush();
                         break;
                     case SESSION_KEY:
-                        /////////
+                        clientSession.add("Session request");
+                        objos.writeObject(clientSession.getSessionList());
+                        objos.flush();
                         break;
                 }
             }

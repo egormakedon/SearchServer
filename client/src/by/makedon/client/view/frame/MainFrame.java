@@ -1,7 +1,7 @@
 package by.makedon.client.view.frame;
 
 import by.makedon.client.controller.ClientController;
-import by.makedon.client.table.Table;
+import by.makedon.client.table.PersonInformationTable;
 import by.makedon.client.view.panel.MenuBar;
 import by.makedon.client.view.panel.SearchPanel;
 import by.makedon.client.view.panel.TablePanel;
@@ -12,7 +12,7 @@ import java.awt.*;
 public class MainFrame {
     private JFrame frame;
     private ClientController clientController;
-    private Table table = new Table();
+    private PersonInformationTable personInformationTable = new PersonInformationTable();
 
     public MainFrame(ClientController clientController) {
         final String TITLE = "Book Of Reference";
@@ -52,13 +52,13 @@ public class MainFrame {
     }
 
     private void addSearchPanel() {
-        SearchPanel panel = new SearchPanel(clientController, table);
+        SearchPanel panel = new SearchPanel(clientController, personInformationTable);
         panel.set();
         frame.add(panel.getPanel(), BorderLayout.NORTH);
     }
 
     private void addTablePanel() {
-        TablePanel panel = new TablePanel(table);
+        TablePanel panel = new TablePanel(personInformationTable);
         frame.add(panel.getTablePanel(), BorderLayout.CENTER);
     }
 }

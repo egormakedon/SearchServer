@@ -4,11 +4,11 @@ import javax.swing.table.AbstractTableModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TableModel extends AbstractTableModel {
+public class PersonInformationTableModel extends AbstractTableModel {
     private int columnCount = 6;
     private List<String[]> personInformationList;
 
-    TableModel() {
+    PersonInformationTableModel() {
         personInformationList = new ArrayList<String[]>();
     }
 

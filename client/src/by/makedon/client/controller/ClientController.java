@@ -4,9 +4,8 @@ import by.makedon.client.creator.QueryCreator;
 import by.makedon.client.criteria.Criteria;
 import by.makedon.client.exception.WrongConnectionException;
 import by.makedon.client.exception.WrongDataInputException;
-import by.makedon.client.model.PersonList;
 import by.makedon.client.parser.PersonInformationParser;
-import by.makedon.client.table.Table;
+import by.makedon.client.table.PersonInformationTable;
 import by.makedon.client.validator.CriteriaValidator;
 import by.makedon.client.validator.SocketParamsValidator;
 
@@ -15,11 +14,8 @@ import java.util.Map;
 
 public class ClientController {
     private ClientSocketProcessor clientSocketProcessor;
-    private PersonList personList;
-
-    public ClientController(ClientSocketProcessor clientSocketProcessor, PersonList personList) {
+    public ClientController(ClientSocketProcessor clientSocketProcessor) {
         this.clientSocketProcessor = clientSocketProcessor;
-        this.personList = personList;
     }
 
     public void connect(String ip, String port) throws WrongConnectionException {
@@ -33,7 +29,6 @@ public class ClientController {
         if (clientSocketProcessor.isConnection()) {
             throw new WrongConnectionException("Tried to set connection when you have already connected");
         }
-
         clientSocketProcessor.createClientSocket(ip, Integer.parseInt(port));
     }
 
@@ -63,21 +58,17 @@ public class ClientController {
         if (!clientSocketProcessor.isConnection()) {
             throw new WrongConnectionException("Client hasn't connected to Server");
         }
-
         QueryCreator queryCreator = new QueryCreator();
         final String QUERY = queryCreator.create(criteriaMap);
         return clientSocketProcessor.findPersonInformation(QUERY);
     }
 
-    public void refreshTable(Table table, List<String> personInformation) {
-        table.clearTable();
-        personList.clear();
-        personList.add(personInformation);
-
+    public void refreshTable(PersonInformationTable personInformationTable, List<String> personInformation) {
+        personInformationTable.clearTable();
         PersonInformationParser parser = new PersonInformationParser();
         for (String person : personInformation) {
-            table.addPersonInformation(parser.parse(person, " "));
+            personInformationTable.addPersonInformation(parser.parse(person, " "));
         }
-        table.getTable().revalidate();
+        personInformationTable.getTable().revalidate();
     }
 }
