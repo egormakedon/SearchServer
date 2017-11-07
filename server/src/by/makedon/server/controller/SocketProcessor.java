@@ -19,40 +19,38 @@ public class SocketProcessor implements Runnable {
         isSocketRun = true;
     }
 
-    class CloseSocketTimer extends TimerTask {
-        @Override
-        public void run() {
-            try {
-                final int TIMEOUT = 500;
-                if (socket != null && (socket.isClosed() || !socket.getInetAddress().isReachable(TIMEOUT))) {
-                    isSocketRun = false;
-                }
-            } catch (IOException e) {
-                logger.log(Level.WARN, e);
-            }
-        }
-    }
+//    class CloseSocketTimer extends TimerTask {
+//        @Override
+//        public void run() {
+//            try {
+//                final int TIMEOUT = 500;
+//                if (socket != null && (socket.isClosed() || !socket.getInetAddress().isReachable(TIMEOUT))) {
+//                    isSocketRun = false;
+//                }
+//            } catch (IOException e) {
+//                logger.log(Level.WARN, e);
+//            }
+//        }
+//    }
 
     @Override
     public void run() {
-        logger.log(Level.INFO, "Client " + socket.getInetAddress() + " Thread have run");
-
-        final int DELAY = 1_000;
-        Timer timer = new Timer();
-        timer.schedule(new CloseSocketTimer(), DELAY);
+//        final int DELAY = 1_000;
+//        Timer timer = new Timer();
+//        timer.schedule(new CloseSocketTimer(), DELAY);
 
         final String PERSON_INFORMATION_KEY = "PERSONINFORMATION";
         final String SESSION_KEY = "SESSION";
 
-        while (isSocketRun) {
-            ObjectInputStream objis = null;
-            ObjectOutputStream objos = null;
-            try {
-                InputStream is = socket.getInputStream();
-                OutputStream os = socket.getOutputStream();
-                objis = new ObjectInputStream(is);
-                objos = new ObjectOutputStream(os);
+        ObjectInputStream objis = null;
+        ObjectOutputStream objos = null;
+        try {
+            InputStream is = socket.getInputStream();
+            OutputStream os = socket.getOutputStream();
+            objis = new ObjectInputStream(is);
+            objos = new ObjectOutputStream(os);
 
+            while (isSocketRun) {
                 final String KEY = (String) objis.readObject();
                 switch (KEY) {
                     case PERSON_INFORMATION_KEY:
@@ -66,34 +64,33 @@ public class SocketProcessor implements Runnable {
                         /////////
                         break;
                 }
-            } catch (ClassNotFoundException | IOException e) {
-                logger.log(Level.WARN, e);
-            } finally {
-                if (objis != null) {
-                    try {
-                        objis.close();
-                    } catch (IOException e) {
-                        logger.log(Level.WARN, e);
-                    }
+            }
+        } catch (ClassNotFoundException | IOException e) {
+            isSocketRun = false;
+            logger.log(Level.ERROR, e);
+        } finally {
+            if (objis != null) {
+                try {
+                    objis.close();
+                } catch (IOException e) {
+                    logger.log(Level.ERROR, e);
                 }
-                if (objos != null) {
-                    try {
-                        objos.close();
-                    } catch (IOException e) {
-                        logger.log(Level.WARN, e);
-                    }
+            }
+            if (objos != null) {
+                try {
+                    objos.close();
+                } catch (IOException e) {
+                    logger.log(Level.ERROR, e);
+                }
+            }
+            if (!socket.isClosed()) {
+                try {
+                    socket.close();
+                    logger.log(Level.INFO, "ClientSocket " + socket.getInetAddress() + " " + socket.getPort() + " have closed");
+                } catch (IOException e) {
+                    logger.log(Level.ERROR, e);
                 }
             }
         }
-        timer.cancel();
-        logger.log(Level.INFO, "Client " + socket.getInetAddress() + " Thread have stopped");
-        if (socket != null && !socket.isClosed()) {
-            try {
-                socket.close();
-            } catch (IOException e) {
-                logger.log(Level.WARN, e);
-            }
-        }
-        logger.log(Level.INFO, "ClientSocket " + socket.getInetAddress() + " have closed");
     }
 }
