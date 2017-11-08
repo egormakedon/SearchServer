@@ -41,3 +41,50 @@
 2017-11-07 21:44:04.845 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Have opened connection to DB
 2017-11-07 21:44:04.851 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Have closed connection to DB
 2017-11-07 21:44:12.168 [Thread-2] ERROR by.makedon.server.controller.SocketProcessor - java.io.EOFException
+2017-11-07 21:49:36.996 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - SearchServer was ran
+2017-11-07 21:49:37.001 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ServerSocket was created
+2017-11-07 21:49:43.553 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ClientSocket /192.168.100.8 48240 was connected
+2017-11-07 21:50:05.328 [Thread-2] ERROR by.makedon.server.controller.SocketProcessor - java.io.EOFException
+2017-11-07 21:50:30.697 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - SearchServer was stopped
+2017-11-08 13:31:48.433 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - SearchServer was ran
+2017-11-08 13:31:48.460 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ServerSocket was created
+2017-11-08 13:31:57.658 [Thread-2] INFO  by.makedon.server.searchserver.SearchServer - SearchServer has already run
+2017-11-08 13:32:29.463 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ClientSocket /192.168.43.55 33328 was connected
+2017-11-08 13:32:38.445 [Thread-3] INFO  by.makedon.server.database.BookOfReferenceDB - Set mysql driver
+2017-11-08 13:32:38.775 [Thread-3] INFO  by.makedon.server.database.BookOfReferenceDB - Have opened connection to DB
+2017-11-08 13:32:38.783 [Thread-3] INFO  by.makedon.server.database.BookOfReferenceDB - Have closed connection to DB
+2017-11-08 13:33:12.385 [Thread-3] ERROR by.makedon.server.controller.SocketProcessor - java.io.EOFException
+2017-11-08 13:33:18.019 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - SearchServer was stopped
+2017-11-08 14:25:42.779 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - SearchServer was ran
+2017-11-08 14:25:42.789 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ServerSocket was created
+2017-11-08 14:25:53.545 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ClientSocket /192.168.43.55 35764 was connected
+2017-11-08 14:25:56.366 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Set mysql driver
+2017-11-08 14:25:56.494 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Have opened connection to DB
+2017-11-08 14:25:56.514 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Have closed connection to DB
+2017-11-08 14:27:14.693 [Thread-2] ERROR by.makedon.server.controller.SocketProcessor - java.io.EOFException
+2017-11-08 14:47:24.757 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - SearchServer was ran
+2017-11-08 14:47:24.763 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ServerSocket was created
+2017-11-08 14:47:36.809 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ClientSocket /192.168.43.55 44490 was connected
+2017-11-08 14:47:39.337 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Set mysql driver
+2017-11-08 14:47:39.467 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Have opened connection to DB
+2017-11-08 14:47:39.537 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Have closed connection to DB
+2017-11-08 14:49:51.090 [Thread-2] ERROR by.makedon.server.controller.SocketProcessor - java.io.EOFException
+2017-11-08 14:49:58.781 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - SearchServer was ran
+2017-11-08 14:49:58.788 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ServerSocket was created
+2017-11-08 14:50:09.540 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ClientSocket /192.168.43.55 44512 was connected
+2017-11-08 14:50:17.079 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Set mysql driver
+2017-11-08 14:50:17.210 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Have opened connection to DB
+2017-11-08 14:50:17.216 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Have closed connection to DB
+2017-11-08 14:50:40.691 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Set mysql driver
+2017-11-08 14:50:40.700 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Have opened connection to DB
+2017-11-08 14:50:40.710 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Have closed connection to DB
+2017-11-08 14:50:42.699 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Set mysql driver
+2017-11-08 14:50:42.708 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Have opened connection to DB
+2017-11-08 14:50:42.716 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Have closed connection to DB
+2017-11-08 14:50:52.827 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Set mysql driver
+2017-11-08 14:50:52.836 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Have opened connection to DB
+2017-11-08 14:50:52.872 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Have closed connection to DB
+2017-11-08 14:51:38.516 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Set mysql driver
+2017-11-08 14:51:38.522 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Have opened connection to DB
+2017-11-08 14:51:38.600 [Thread-2] INFO  by.makedon.server.database.BookOfReferenceDB - Have closed connection to DB
+2017-11-08 14:52:22.681 [Thread-2] ERROR by.makedon.server.controller.SocketProcessor - java.io.EOFException

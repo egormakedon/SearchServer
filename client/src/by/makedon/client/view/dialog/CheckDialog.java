@@ -1,6 +1,10 @@
 package by.makedon.client.view.dialog;
 
 import by.makedon.client.controller.ClientController;
+import by.makedon.client.exception.WrongConnectionException;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,6 +16,7 @@ public class CheckDialog extends Dialog {
     private ClientController clientController;
     private JButton printButton;
     private JButton saveButton;
+    static Logger logger = LogManager.getLogger(CheckDialog.class);
 
     public CheckDialog(String TITLE, ClientController clientController) {
         super(TITLE);
@@ -29,10 +34,13 @@ public class CheckDialog extends Dialog {
     class PrintAction implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            final String DIALOG_TITLE = "Session...";
-            SessionDialog sessionDialog = new SessionDialog(DIALOG_TITLE, clientController);
-            sessionDialog.set();
-            sessionDialog.show();
+            SessionDialog sessionDialog = new SessionDialog(clientController);
+            try {
+                sessionDialog.set();
+            } catch (WrongConnectionException e1) {
+                logger.log(Level.ERROR, e1);
+                JOptionPane.showMessageDialog(dialog, e1.getMessage());
+            }
         }
     }
 

@@ -86,4 +86,19 @@ public class ClientSocketProcessor {
         }
         return personInformation;
     }
+
+    List<String> sessionRequest() throws WrongConnectionException {
+        List<String> sessionList;
+        final String KEY = "SESSION";
+        try {
+            clientSocket.getObjos().writeObject(KEY);
+            clientSocket.getObjos().flush();
+            sessionList = (ArrayList<String>) clientSocket.getObjis().readObject();
+        } catch (IOException e) {
+            throw new WrongConnectionException("Stream haven't opened", e);
+        } catch (ClassNotFoundException e) {
+            throw new WrongConnectionException("Object haven't read from Stream", e);
+        }
+        return sessionList;
+    }
 }

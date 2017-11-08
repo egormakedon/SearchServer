@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="client:jar">
+    <output-path>$PROJECT_DIR$</output-path>
+    <root id="archive" name="client.jar">
+      <element id="module-output" name="client" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/testng/testng/6.8.8/testng-6.8.8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/beust/jcommander/1.27/jcommander-1.27.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/lib/log4j-api-2.9.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/lib/log4j-core-2.9.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

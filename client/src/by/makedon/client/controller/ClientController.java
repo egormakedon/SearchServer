@@ -4,8 +4,8 @@ import by.makedon.client.creator.QueryCreator;
 import by.makedon.client.criteria.Criteria;
 import by.makedon.client.exception.WrongConnectionException;
 import by.makedon.client.exception.WrongDataInputException;
-import by.makedon.client.parser.PersonInformationParser;
-import by.makedon.client.table.PersonInformationTable;
+import by.makedon.client.parser.StringParser;
+import by.makedon.client.table.Table;
 import by.makedon.client.validator.CriteriaValidator;
 import by.makedon.client.validator.SocketParamsValidator;
 
@@ -63,12 +63,19 @@ public class ClientController {
         return clientSocketProcessor.findPersonInformation(QUERY);
     }
 
-    public void refreshTable(PersonInformationTable personInformationTable, List<String> personInformation) {
-        personInformationTable.clearTable();
-        PersonInformationParser parser = new PersonInformationParser();
-        for (String person : personInformation) {
-            personInformationTable.addPersonInformation(parser.parse(person, " "));
+    public List<String> sessionRequest() throws WrongConnectionException {
+        if (!clientSocketProcessor.isConnection()) {
+            throw new WrongConnectionException("Client hasn't connected to Server");
         }
-        personInformationTable.getTable().revalidate();
+        return clientSocketProcessor.sessionRequest();
+    }
+
+    public void refreshTable(Table table, List<String> stringList) {
+        table.clearTable();
+        StringParser parser = new StringParser();
+        for (String string : stringList) {
+            table.add(parser.parse(string, " "));
+        }
+        table.getTable().revalidate();
     }
 }

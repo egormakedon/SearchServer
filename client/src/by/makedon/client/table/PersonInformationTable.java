@@ -2,7 +2,7 @@ package by.makedon.client.table;
 
 import javax.swing.*;
 
-public class PersonInformationTable extends JTable{
+public class PersonInformationTable extends Table{
     private JTable table;
     private PersonInformationTableModel personInformationTableModel;
 
@@ -15,7 +15,7 @@ public class PersonInformationTable extends JTable{
         return table;
     }
 
-    public void addPersonInformation(String[] personInformation) {
+    public void add(String[] personInformation) {
         personInformationTableModel.addPersonInformation(personInformation);
     }
 

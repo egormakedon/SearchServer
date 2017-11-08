@@ -8,3 +8,16 @@
 2017-11-07 21:43:54.071 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
 2017-11-07 21:44:23.051 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.DisconnectionDialog - ClientSocket haven't connected yet
 2017-11-07 21:46:47.443 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.ConnectionDialog - by.makedon.client.exception.WrongConnectionException: Invalid ip: 
+2017-11-07 21:49:43.569 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-07 21:49:59.559 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.ConnectionDialog - by.makedon.client.exception.WrongConnectionException: Tried to set connection when you have already connected
+2017-11-08 13:32:29.473 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-08 14:17:48.440 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.SessionDialog - by.makedon.client.exception.WrongConnectionException: Client hasn't connected to Server
+2017-11-08 14:19:53.502 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.CheckDialog - by.makedon.client.exception.WrongConnectionException: Client hasn't connected to Server
+2017-11-08 14:20:16.249 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.CheckDialog - by.makedon.client.exception.WrongConnectionException: Client hasn't connected to Server
+2017-11-08 14:20:19.327 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.CheckDialog - by.makedon.client.exception.WrongConnectionException: Client hasn't connected to Server
+2017-11-08 14:20:20.267 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.CheckDialog - by.makedon.client.exception.WrongConnectionException: Client hasn't connected to Server
+2017-11-08 14:20:21.081 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.CheckDialog - by.makedon.client.exception.WrongConnectionException: Client hasn't connected to Server
+2017-11-08 14:20:21.660 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.CheckDialog - by.makedon.client.exception.WrongConnectionException: Client hasn't connected to Server
+2017-11-08 14:25:53.555 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-08 14:47:36.821 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-08 14:50:09.551 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected

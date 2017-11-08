@@ -39,36 +39,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/by/makedon/generator/main/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookOfReferenceDB.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BookOfReferenceDB.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/by/makedon/generator/database/BookOfReferenceDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="30" column="60" lean-forward="false" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+            <state relative-caret-position="316">
+              <caret line="73" column="23" lean-forward="true" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1509974090531" expanded="true" signature="844:874" ph="DELETE FROM " />
-                <marker date="1509974090531" expanded="true" signature="928:975" ph="ALTER TABLE person_information... " />
+                <marker date="1510181129028" expanded="true" signature="983:1013" ph="DELETE FROM " />
+                <marker date="1510181129028" expanded="true" signature="1070:1117" ph="ALTER TABLE person_information... " />
+                <marker date="1510181129028" expanded="true" signature="2993:3023" ph="DELETE FROM " />
+                <marker date="1510181129028" expanded="true" signature="3078:3125" ph="ALTER TABLE person_information... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QueryCreator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/makedon/generator/creator/QueryCreator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -97,11 +78,11 @@
         <option value="$PROJECT_DIR$/src/by/makedon/generator/Generator.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/generator/Randomizaer.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/generator/Randomizer.java" />
-        <option value="$PROJECT_DIR$/src/by/makedon/generator/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/by/makedon/generator/generator/Generator.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/generator/criteria/Criteria.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/generator/randomizer/Randomizer.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/generator/creator/QueryCreator.java" />
+        <option value="$PROJECT_DIR$/src/by/makedon/generator/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/by/makedon/generator/generator/Generator.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/generator/database/BookOfReferenceDB.java" />
       </list>
     </option>
@@ -132,7 +113,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -150,8 +130,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -298,11 +279,12 @@
       <workItem from="1509966367947" duration="6976000" />
       <workItem from="1509973726947" duration="756000" />
       <workItem from="1509974514807" duration="98000" />
+      <workItem from="1510180399092" duration="1560000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7830000" />
+    <option name="totallyTimeSpent" value="9390000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1920" height="1035" extended-state="6" />
@@ -318,10 +300,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18722467" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14461046" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14621131" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -359,11 +341,41 @@
     <entry file="file://$PROJECT_DIR$/src/by/makedon/generator/database/BookOfReferenceDB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
+          <caret line="30" column="60" lean-forward="false" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+          <folding>
+            <marker date="1510181129028" expanded="true" signature="983:1013" ph="DELETE FROM " />
+            <marker date="1510181129028" expanded="true" signature="1070:1117" ph="ALTER TABLE person_information... " />
+            <marker date="1510181129028" expanded="true" signature="2993:3023" ph="DELETE FROM " />
+            <marker date="1510181129028" expanded="true" signature="3078:3125" ph="ALTER TABLE person_information... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/makedon/generator/creator/QueryCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/makedon/generator/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/makedon/generator/database/BookOfReferenceDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
           <caret line="30" column="60" lean-forward="true" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1509974090531" expanded="true" signature="844:874" ph="DELETE FROM " />
-            <marker date="1509974090531" expanded="true" signature="928:975" ph="ALTER TABLE person_information... " />
+            <marker date="1510181129028" expanded="true" signature="983:1013" ph="DELETE FROM " />
+            <marker date="1510181129028" expanded="true" signature="1070:1117" ph="ALTER TABLE person_information... " />
+            <marker date="1510181129028" expanded="true" signature="2993:3023" ph="DELETE FROM " />
+            <marker date="1510181129028" expanded="true" signature="3078:3125" ph="ALTER TABLE person_information... " />
           </folding>
         </state>
       </provider>
@@ -399,33 +411,15 @@
       </provider>
     </entry>
     <entry file="das://table:/a27faeed/4634c6ee-4afd-4ceb-80d7-0774499dcf9c/book_of_reference.person_infomation" />
-    <entry file="file://$PROJECT_DIR$/src/by/makedon/generator/generator/Generator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/makedon/generator/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/makedon/generator/database/BookOfReferenceDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="30" column="60" lean-forward="false" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1509974090531" expanded="true" signature="844:874" ph="DELETE FROM " />
-            <marker date="1509974090531" expanded="true" signature="928:975" ph="ALTER TABLE person_information... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://table:/84576f05/4634c6ee-4afd-4ceb-80d7-0774499dcf9c/book_of_reference.person_information" />
     <entry file="file://$PROJECT_DIR$/src/by/makedon/generator/creator/QueryCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -434,7 +428,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/84576f05/4634c6ee-4afd-4ceb-80d7-0774499dcf9c/book_of_reference.person_information" />
+    <entry file="file://$PROJECT_DIR$/src/by/makedon/generator/generator/Generator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/makedon/generator/database/BookOfReferenceDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="73" column="23" lean-forward="true" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+          <folding>
+            <marker date="1510181129028" expanded="true" signature="983:1013" ph="DELETE FROM " />
+            <marker date="1510181129028" expanded="true" signature="1070:1117" ph="ALTER TABLE person_information... " />
+            <marker date="1510181129028" expanded="true" signature="2993:3023" ph="DELETE FROM " />
+            <marker date="1510181129028" expanded="true" signature="3078:3125" ph="ALTER TABLE person_information... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
