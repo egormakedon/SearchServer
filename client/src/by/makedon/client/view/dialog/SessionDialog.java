@@ -22,8 +22,9 @@ class SessionDialog {
     public void set() throws WrongConnectionException {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize();
-        addTable();
         sessionRequest();
+        addTable();
+        show();
     }
 
     private void setSize() {
@@ -42,8 +43,6 @@ class SessionDialog {
 
     private void sessionRequest() throws WrongConnectionException {
         clientController.refreshTable(sessionTable, clientController.sessionRequest());
-        addTable();
-        show();
     }
 
     private void show() {

@@ -21,3 +21,20 @@
 2017-11-08 14:25:53.555 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
 2017-11-08 14:47:36.821 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
 2017-11-08 14:50:09.551 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-09 02:08:32.231 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-09 02:17:00.439 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-09 02:19:23.646 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-09 02:22:29.148 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-09 02:25:16.645 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-09 02:28:06.886 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-09 02:30:11.741 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-09 02:32:07.955 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-09 02:36:40.192 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-09 02:37:59.959 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-09 02:39:37.222 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.ConnectionDialog - by.makedon.client.exception.WrongConnectionException: ClientSocket io exception
+2017-11-09 02:39:41.283 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-09 02:41:03.892 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.ConnectionDialog - by.makedon.client.exception.WrongConnectionException: ClientSocket io exception
+2017-11-09 02:41:10.155 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-09 18:57:36.001 [AWT-EventQueue-0] ERROR makedon.client.view.dialog.CheckDialog - by.makedon.client.exception.WrongConnectionException: Client hasn't connected to Server
+2017-11-09 18:58:14.434 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected
+2017-11-09 19:02:20.893 [AWT-EventQueue-0] INFO  by.makedon.client.socket.ClientSocket - ClientSocket connected

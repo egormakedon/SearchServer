@@ -2,14 +2,17 @@ package by.makedon.client.view.dialog;
 
 import by.makedon.client.controller.ClientController;
 import by.makedon.client.exception.WrongConnectionException;
+import by.makedon.client.parser.XmlSessionParser;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.util.List;
 
 public class CheckDialog extends Dialog {
@@ -47,7 +50,23 @@ public class CheckDialog extends Dialog {
     class SaveAction implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            try {
+                List<String> sessionList = clientController.sessionRequest();
+                XmlSessionParser xmlParser = new XmlSessionParser();
 
+                JFileChooser fileChooser = new JFileChooser();
+                FileNameExtensionFilter filter = new FileNameExtensionFilter("*.xml", "xml");
+                fileChooser.setFileFilter(filter);
+
+                int ret = fileChooser.showDialog(dialog, "save session");
+                if (ret == JFileChooser.APPROVE_OPTION) {
+                    File file = fileChooser.getSelectedFile();
+                    xmlParser.parse(file, sessionList);
+                }
+            } catch (WrongConnectionException e1) {
+                logger.log(Level.ERROR, e1);
+                JOptionPane.showMessageDialog(dialog, e1.getMessage());
+            }
         }
     }
 

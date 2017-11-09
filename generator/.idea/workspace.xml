@@ -42,8 +42,8 @@
       <file leaf-file-name="BookOfReferenceDB.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/by/makedon/generator/database/BookOfReferenceDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="73" column="23" lean-forward="true" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+            <state relative-caret-position="-523">
+              <caret line="64" column="21" lean-forward="true" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
               <folding>
                 <marker date="1510181129028" expanded="true" signature="983:1013" ph="DELETE FROM " />
                 <marker date="1510181129028" expanded="true" signature="1070:1117" ph="ALTER TABLE person_information... " />
@@ -279,12 +279,12 @@
       <workItem from="1509966367947" duration="6976000" />
       <workItem from="1509973726947" duration="756000" />
       <workItem from="1509974514807" duration="98000" />
-      <workItem from="1510180399092" duration="1560000" />
+      <workItem from="1510180399092" duration="1604000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9390000" />
+    <option name="totallyTimeSpent" value="9434000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1920" height="1035" extended-state="6" />
@@ -438,8 +438,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/makedon/generator/database/BookOfReferenceDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="73" column="23" lean-forward="true" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+        <state relative-caret-position="-523">
+          <caret line="64" column="21" lean-forward="true" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
           <folding>
             <marker date="1510181129028" expanded="true" signature="983:1013" ph="DELETE FROM " />
             <marker date="1510181129028" expanded="true" signature="1070:1117" ph="ALTER TABLE person_information... " />

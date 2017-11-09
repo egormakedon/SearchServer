@@ -41,7 +41,7 @@ public class SocketProcessor implements Runnable {
 //        final int DELAY = 1_000;
 //        Timer timer = new Timer();
 //        timer.schedule(new CloseSocketTimer(), DELAY);
-        clientSession.add("Connected to server");
+        clientSession.add("Connected_to_server");
 
         final String PERSON_INFORMATION_KEY = "PERSONINFORMATION";
         final String SESSION_KEY = "SESSION";
@@ -58,14 +58,14 @@ public class SocketProcessor implements Runnable {
                 final String KEY = (String) objis.readObject();
                 switch (KEY) {
                     case PERSON_INFORMATION_KEY:
-                        clientSession.add("Information request");
+                        clientSession.add("Information_request");
                         final String QUERY = (String) objis.readObject();
                         Controller controller = new Controller();
                         objos.writeObject(controller.findPersonInformation(QUERY));
                         objos.flush();
                         break;
                     case SESSION_KEY:
-                        clientSession.add("Session request");
+                        clientSession.add("Session_request");
                         objos.writeObject(clientSession.getSessionList());
                         objos.flush();
                         break;
