@@ -12,7 +12,6 @@ public class Main {
         ClientSocketInfo clientSocketInfo = new ClientSocketInfo();
         ClientSocketProcessor clientSocketProcessor = new ClientSocketProcessor(clientSocket, clientSocketInfo);
         ClientController clientController = new ClientController(clientSocketProcessor);
-
         MainFrame mainFrame = new MainFrame(clientController);
         mainFrame.set();
         mainFrame.show();

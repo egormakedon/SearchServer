@@ -70,8 +70,9 @@ public class ConnectionDialog extends Dialog {
             String port = portField.getText();
             try {
                 clientController.connect(ip, port);
+                JOptionPane.showMessageDialog(dialog,"Client has connected to server");
             } catch (WrongConnectionException e1) {
-                JOptionPane.showMessageDialog(dialog,"Wrong connect to server");
+                JOptionPane.showMessageDialog(dialog, e1.getMessage());
                 logger.log(Level.ERROR, e1);
             }
         }

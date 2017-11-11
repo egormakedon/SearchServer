@@ -14,6 +14,7 @@ import java.util.Map;
 
 public class ClientController {
     private ClientSocketProcessor clientSocketProcessor;
+
     public ClientController(ClientSocketProcessor clientSocketProcessor) {
         this.clientSocketProcessor = clientSocketProcessor;
     }
@@ -26,19 +27,23 @@ public class ClientController {
         if (!validator.validationPort(port)) {
             throw new WrongConnectionException("Invalid port: " + port);
         }
-        if (clientSocketProcessor.isConnection()) {
+        if (clientSocketProcessor.connectionState()) {
             throw new WrongConnectionException("Tried to set connection when you have already connected");
         }
         clientSocketProcessor.createClientSocket(ip, Integer.parseInt(port));
     }
 
-    public boolean disconnect() {
-        return clientSocketProcessor.closeClientSocket();
+    public void disconnect() throws WrongConnectionException {
+        if (clientSocketProcessor.connectionState()) {
+            clientSocketProcessor.closeClientSocket();
+        } else {
+            throw new WrongConnectionException("ClientSocket haven't connected yet");
+        }
     }
 
-    public List<String> getConnectionInfo() {
+    public List<String> getConnectionInfo() throws WrongConnectionException {
         List<String> connectionInfoList = clientSocketProcessor.getConnectionInfo();
-        if (clientSocketProcessor.isConnection()) {
+        if (clientSocketProcessor.connectionState()) {
             final String TRUE = "TRUE";
             connectionInfoList.add(TRUE);
         } else {
@@ -55,7 +60,7 @@ public class ClientController {
                     "First and Last names begin with high register.\n" +
                     "Phone consists of 9 numbers");
         }
-        if (!clientSocketProcessor.isConnection()) {
+        if (!clientSocketProcessor.connectionState()) {
             throw new WrongConnectionException("Client hasn't connected to Server");
         }
         QueryCreator queryCreator = new QueryCreator();
@@ -64,8 +69,8 @@ public class ClientController {
     }
 
     public List<String> sessionRequest() throws WrongConnectionException {
-        if (!clientSocketProcessor.isConnection()) {
-            throw new WrongConnectionException("Client hasn't connected to Server");
+        if (!clientSocketProcessor.connectionState()) {
+            throw new WrongConnectionException("Client hasn't connected to server");
         }
         return clientSocketProcessor.sessionRequest();
     }
@@ -76,6 +81,6 @@ public class ClientController {
         for (String string : stringList) {
             table.add(parser.parse(string, " "));
         }
-        table.getTable().revalidate();
+        table.updateTable();
     }
 }

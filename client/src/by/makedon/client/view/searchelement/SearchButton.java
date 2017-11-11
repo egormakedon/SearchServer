@@ -41,7 +41,6 @@ public class SearchButton {
             criteriaMap.put(Criteria.PHONE, searchCriteria.getPhone().getText());
             criteriaMap.put(Criteria.EMAIL, searchCriteria.getEmail().getText());
             criteriaMap.put(Criteria.SKYPE, searchCriteria.getSkype().getText());
-
             try {
                 List<String> personInformation = clientController.sendQuery(criteriaMap);
                 if (!personInformation.isEmpty()) {

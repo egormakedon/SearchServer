@@ -4,63 +4,43 @@ import by.makedon.client.exception.WrongConnectionException;
 import by.makedon.client.exception.WrongDataInputException;
 import by.makedon.client.socket.ClientSocket;
 import by.makedon.client.socket.ClientSocketInfo;
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class ClientSocketProcessor {
     private ClientSocket clientSocket;
     private ClientSocketInfo clientSocketInfo;
-    static Logger logger = LogManager.getLogger(ClientSocketProcessor.class);
 
     public ClientSocketProcessor(ClientSocket clientSocket, ClientSocketInfo clientSocketInfo) {
         this.clientSocket = clientSocket;
         this.clientSocketInfo = clientSocketInfo;
     }
 
-//    class ClientClosedTimer extends TimerTask {
-//        @Override
-//        public void run() {
-//            try {
-//                final int TIMEOUT = 1_000;
-//                if (!clientSocket.getClientSocket().getInetAddress().isReachable(TIMEOUT)) {
-//                    closeClientSocket();
-//                }
-//            } catch (IOException e) {
-//                logger.log(Level.WARN, e);
-//            }
-//        }
-//    }
+    boolean connectionState() throws WrongConnectionException {
+        if (clientSocketInfo.isConnection()) {
+            if (clientSocket.getKeepAlive()) {
+                return true;
+            } else {
+                closeClientSocket();
+                throw new WrongConnectionException("Have lost connection to server");
+            }
+        } else {
+            return false;
+        }
+    }
 
-    boolean isConnection() {
-        return clientSocketInfo.isConnection();
+    void closeClientSocket() {
+        clientSocketInfo.setConnectionFalse();
+        clientSocket.closeClientSocket();
     }
 
     void createClientSocket(String ip, int port) throws WrongConnectionException {
         if (clientSocket.createClientSocket(ip, port)) {
             clientSocketInfo.setIpPort(ip, port);
             clientSocketInfo.setConnectionTrue();
-
-//            final long DELAY = 2_000;
-//            timer = new Timer();
-//            timer.schedule(new ServerClosedTimer(), DELAY);
         }
-    }
-
-    boolean closeClientSocket() {
-        if (isConnection()) {
-            clientSocketInfo.setConnectionFalse();
-            clientSocket.closeClientSocket();
-//            timer.cancel();
-            return true;
-        }
-        return false;
     }
 
     List<String> getConnectionInfo() {
@@ -74,15 +54,17 @@ public class ClientSocketProcessor {
         List<String> personInformation;
         final String KEY = "PERSONINFORMATION";
         try {
-            clientSocket.getObjos().writeObject(KEY);
-            clientSocket.getObjos().flush();
-            clientSocket.getObjos().writeObject(QUERY);
-            clientSocket.getObjos().flush();
-            personInformation = (ArrayList<String>) clientSocket.getObjis().readObject();
+            ObjectInputStream objis = clientSocket.getObjis();
+            ObjectOutputStream objos = clientSocket.getObjos();
+            objos.writeObject(KEY);
+            objos.flush();
+            objos.writeObject(QUERY);
+            objos.flush();
+            personInformation = (ArrayList<String>) objis.readObject();
         } catch (IOException e) {
             throw new WrongConnectionException("Stream haven't opened", e);
         } catch (ClassNotFoundException e) {
-            throw new WrongConnectionException("Object haven't read from Stream", e);
+            throw new WrongConnectionException("Object haven't read from stream", e);
         }
         return personInformation;
     }
@@ -91,13 +73,15 @@ public class ClientSocketProcessor {
         List<String> sessionList;
         final String KEY = "SESSION";
         try {
-            clientSocket.getObjos().writeObject(KEY);
-            clientSocket.getObjos().flush();
-            sessionList = (ArrayList<String>) clientSocket.getObjis().readObject();
+            ObjectInputStream objis = clientSocket.getObjis();
+            ObjectOutputStream objos = clientSocket.getObjos();
+            objos.writeObject(KEY);
+            objos.flush();
+            sessionList = (ArrayList<String>) objis.readObject();
         } catch (IOException e) {
             throw new WrongConnectionException("Stream haven't opened", e);
         } catch (ClassNotFoundException e) {
-            throw new WrongConnectionException("Object haven't read from Stream", e);
+            throw new WrongConnectionException("Object haven't read from stream", e);
         }
         return sessionList;
     }

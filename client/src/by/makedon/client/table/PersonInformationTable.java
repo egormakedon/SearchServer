@@ -2,24 +2,32 @@ package by.makedon.client.table;
 
 import javax.swing.*;
 
-public class PersonInformationTable extends Table{
+public class PersonInformationTable implements Table {
     private JTable table;
-    private PersonInformationTableModel personInformationTableModel;
+    private PersonInformationTableModel model;
 
     public PersonInformationTable() {
-        personInformationTableModel = new PersonInformationTableModel();
-        table = new JTable(personInformationTableModel);
+        model = new PersonInformationTableModel();
+        table = new JTable(model);
     }
 
+    @Override
     public JTable getTable() {
         return table;
     }
 
+    @Override
     public void add(String[] personInformation) {
-        personInformationTableModel.addPersonInformation(personInformation);
+        model.addPersonInformation(personInformation);
     }
 
+    @Override
     public void clearTable() {
-        personInformationTableModel.clear();
+        model.clear();
+    }
+
+    @Override
+    public void updateTable() {
+        table.revalidate();
     }
 }

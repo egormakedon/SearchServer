@@ -2,24 +2,32 @@ package by.makedon.client.table;
 
 import javax.swing.*;
 
-public class SessionTable extends Table {
+public class SessionTable implements Table {
     private JTable table;
-    private SessionTableModel sessionTableModel;
+    private SessionTableModel model;
 
     public SessionTable() {
-        sessionTableModel = new SessionTableModel();
-        table = new JTable(sessionTableModel);
+        model = new SessionTableModel();
+        table = new JTable(model);
     }
 
+    @Override
     public JTable getTable() {
         return table;
     }
 
+    @Override
     public void add(String[] session) {
-        sessionTableModel.addSession(session);
+        model.addSession(session);
     }
 
+    @Override
     public void clearTable() {
-        sessionTableModel.clear();
+        model.clear();
+    }
+
+    @Override
+    public void updateTable() {
+        table.revalidate();
     }
 }

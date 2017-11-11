@@ -1,6 +1,7 @@
 package by.makedon.client.view.dialog;
 
 import by.makedon.client.controller.ClientController;
+import by.makedon.client.exception.WrongConnectionException;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -41,9 +42,12 @@ public class DisconnectionDialog extends Dialog {
     class ButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (!clientController.disconnect()) {
-                JOptionPane.showMessageDialog(dialog, "ClientSocket haven't connected yet");
-                logger.log(Level.ERROR,"ClientSocket haven't connected yet");
+            try {
+                clientController.disconnect();
+                JOptionPane.showMessageDialog(dialog, "Client has disconnected from server");
+            } catch (WrongConnectionException e1) {
+                JOptionPane.showMessageDialog(dialog, e1.getMessage());
+                logger.log(Level.ERROR, e1);
             }
         }
     }

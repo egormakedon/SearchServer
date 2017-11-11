@@ -230,3 +230,9 @@ java.net.BindException: Адрес уже используется (Bind failed)
 2017-11-09 19:02:14.139 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ServerSocket was created
 2017-11-09 19:02:20.884 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ClientSocket /192.168.100.8 56020 was connected
 2017-11-09 19:03:18.639 [Thread-2] ERROR by.makedon.server.controller.SocketProcessor - java.io.EOFException
+2017-11-11 17:47:20.348 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - SearchServer was ran
+2017-11-11 17:47:20.351 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ServerSocket was created
+2017-11-11 17:48:17.998 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ClientSocket /192.168.100.8 54438 was connected
+2017-11-11 17:51:04.547 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - SearchServer was ran
+2017-11-11 17:51:04.552 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ServerSocket was created
+2017-11-11 17:51:05.433 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ClientSocket /192.168.100.8 54526 was connected

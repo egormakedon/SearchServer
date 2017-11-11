@@ -6,6 +6,7 @@ import by.makedon.client.table.SessionTable;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.List;
 
 class SessionDialog {
     private ClientController clientController;
@@ -22,9 +23,14 @@ class SessionDialog {
     public void set() throws WrongConnectionException {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize();
-        sessionRequest();
         addTable();
+        List<String> sessionList = sessionRequest();
+        refreshTable(sessionList);
         show();
+    }
+
+    public void disposeFrame() {
+        frame.dispose();
     }
 
     private void setSize() {
@@ -41,8 +47,13 @@ class SessionDialog {
         frame.add(scrollPane);
     }
 
-    private void sessionRequest() throws WrongConnectionException {
-        clientController.refreshTable(sessionTable, clientController.sessionRequest());
+    private List<String> sessionRequest() throws WrongConnectionException {
+        return clientController.sessionRequest();
+
+    }
+
+    private void refreshTable(List<String> sessionList) {
+        clientController.refreshTable(sessionTable, sessionList);
     }
 
     private void show() {

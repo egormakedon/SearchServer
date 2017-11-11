@@ -6,8 +6,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.*;
-import java.net.InetAddress;
 import java.net.Socket;
+import java.net.SocketException;
 
 public class ClientSocket {
     private Socket clientSocket;
@@ -17,47 +17,43 @@ public class ClientSocket {
 
     public boolean createClientSocket(String ip, int port) throws WrongConnectionException {
         try {
-            InetAddress inetAddress = InetAddress.getByName(ip);
-            final int TIMEOUT = 1_000;
-            if (!inetAddress.isReachable(TIMEOUT)) {
-                throw new WrongConnectionException("Connection didn't set");
-            }
-            clientSocket = new Socket(inetAddress, port);
-
+            clientSocket = new Socket(ip, port);
             OutputStream os = clientSocket.getOutputStream();
             InputStream is = clientSocket.getInputStream();
             objos = new ObjectOutputStream(os);
             objis = new ObjectInputStream(is);
-
             logger.log(Level.INFO, "ClientSocket connected");
             return true;
         } catch (IOException e) {
-            throw new WrongConnectionException("ClientSocket io exception", e);
+            throw new WrongConnectionException("Connection didn't set", e);
         }
     }
 
     public void closeClientSocket() {
-        try {
-            if (objos != null) {
-                try {
-                    objos.close();
-                } catch (IOException e) {
-                    logger.log(Level.ERROR, e);
-                }
+        if (objos != null) {
+            try {
+                objos.close();
+                objos = null;
+            } catch (IOException e) {
+                logger.log(Level.ERROR, e);
             }
-            if (objis != null) {
-                try {
-                    objis.close();
-                } catch (IOException e) {
-                    logger.log(Level.ERROR, e);
-                }
+        }
+        if (objis != null) {
+            try {
+                objis.close();
+                objis = null;
+            } catch (IOException e) {
+                logger.log(Level.ERROR, e);
             }
-            if (!clientSocket.isClosed()) {
+        }
+        if (clientSocket != null) {
+            try {
                 clientSocket.close();
+                clientSocket = null;
                 logger.log(Level.INFO, "ClientSocket was closed");
+            } catch (IOException e) {
+                logger.log(Level.ERROR, e);
             }
-        } catch (IOException e) {
-            logger.log(Level.ERROR, "ClientSocket io exception", e);
         }
     }
 
@@ -67,5 +63,17 @@ public class ClientSocket {
 
     public ObjectInputStream getObjis() {
         return objis;
+    }
+
+    public boolean getKeepAlive() {
+        if (clientSocket != null) {
+            try {
+                return clientSocket.getKeepAlive();
+            } catch (SocketException e) {
+                logger.log(Level.ERROR, e);
+                return false;
+            }
+        }
+        return false;
     }
 }

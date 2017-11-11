@@ -13,6 +13,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CheckDialog extends Dialog {
@@ -41,8 +42,9 @@ public class CheckDialog extends Dialog {
             try {
                 sessionDialog.set();
             } catch (WrongConnectionException e1) {
-                logger.log(Level.ERROR, e1);
+                sessionDialog.disposeFrame();
                 JOptionPane.showMessageDialog(dialog, e1.getMessage());
+                logger.log(Level.ERROR, e1);
             }
         }
     }
@@ -90,7 +92,17 @@ public class CheckDialog extends Dialog {
     }
 
     private void addConnectionInfoPanel(JPanel panel) {
-        List<String> connectionInfoList = clientController.getConnectionInfo();
+        List<String> connectionInfoList;
+        try {
+            connectionInfoList = clientController.getConnectionInfo();
+        } catch (WrongConnectionException e) {
+            connectionInfoList = new ArrayList<String>();
+            connectionInfoList.add("");
+            connectionInfoList.add("");
+            connectionInfoList.add("FALSE");
+            JOptionPane.showMessageDialog(dialog, e.getMessage());
+            logger.log(Level.ERROR, e);
+        }
 
         JLabel ip;
         JLabel port;
