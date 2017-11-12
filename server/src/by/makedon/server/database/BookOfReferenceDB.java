@@ -16,23 +16,20 @@ public class BookOfReferenceDB {
 
     public BookOfReferenceDB() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            logger.log(Level.INFO, "Set mysql driver");
-        } catch (ClassNotFoundException e) {
-            logger.log(Level.WARN, e);
+            DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+        } catch (SQLException e) {
+            logger.log(Level.ERROR, e);
+            throw new RuntimeException();
         }
     }
 
     public List<String> findPersonInformation(final String QUERY) {
         Connection connection = null;
-        Statement statement = null;
-        ResultSet resultSet = null;
         List<String> personInformationList = new ArrayList<String>();
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
-            logger.log(Level.INFO, "Have opened connection to DB");
-            statement = connection.createStatement();
-            resultSet = statement.executeQuery(QUERY);
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(QUERY);
 
             while(resultSet.next()) {
                 final String RESULT = resultSet.getString(1) + " " + resultSet.getString(2) + " " +
@@ -41,28 +38,13 @@ public class BookOfReferenceDB {
                 personInformationList.add(RESULT);
             }
         } catch (SQLException e) {
-            logger.log(Level.WARN, e);
+            logger.log(Level.ERROR, e);
         } finally {
-            if (resultSet != null) {
-                try {
-                    resultSet.close();
-                } catch (SQLException e) {
-                    logger.log(Level.WARN, e);
-                }
-            }
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException e) {
-                    logger.log(Level.WARN, e);
-                }
-            }
             if (connection != null) {
                 try {
                     connection.close();
-                    logger.log(Level.INFO, "Have closed connection to DB");
                 } catch (SQLException e) {
-                    logger.log(Level.WARN, e);
+                    logger.log(Level.ERROR, e);
                 }
             }
         }

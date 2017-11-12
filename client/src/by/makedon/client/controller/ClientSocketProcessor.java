@@ -20,9 +20,15 @@ public class ClientSocketProcessor {
 
     boolean connectionState() throws WrongConnectionException {
         if (clientSocketInfo.isConnection()) {
-            if (clientSocket.getKeepAlive()) {
+            ObjectOutputStream objos = clientSocket.getObjos();
+            ObjectInputStream objis = clientSocket.getObjis();
+            final String TEST_CONNECTION = "TEST";
+            try {
+                objos.writeObject(TEST_CONNECTION);
+                objos.flush();
+                objis.readObject();
                 return true;
-            } else {
+            } catch (ClassNotFoundException | IOException e) {
                 closeClientSocket();
                 throw new WrongConnectionException("Have lost connection to server");
             }
@@ -60,7 +66,7 @@ public class ClientSocketProcessor {
             objos.flush();
             objos.writeObject(QUERY);
             objos.flush();
-            personInformation = (ArrayList<String>) objis.readObject();
+            personInformation = (List<String>)objis.readObject();
         } catch (IOException e) {
             throw new WrongConnectionException("Stream haven't opened", e);
         } catch (ClassNotFoundException e) {
@@ -77,7 +83,7 @@ public class ClientSocketProcessor {
             ObjectOutputStream objos = clientSocket.getObjos();
             objos.writeObject(KEY);
             objos.flush();
-            sessionList = (ArrayList<String>) objis.readObject();
+            sessionList = (List<String>)objis.readObject();
         } catch (IOException e) {
             throw new WrongConnectionException("Stream haven't opened", e);
         } catch (ClassNotFoundException e) {

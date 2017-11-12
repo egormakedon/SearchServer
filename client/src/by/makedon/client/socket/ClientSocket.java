@@ -64,16 +64,4 @@ public class ClientSocket {
     public ObjectInputStream getObjis() {
         return objis;
     }
-
-    public boolean getKeepAlive() {
-        if (clientSocket != null) {
-            try {
-                return clientSocket.getKeepAlive();
-            } catch (SocketException e) {
-                logger.log(Level.ERROR, e);
-                return false;
-            }
-        }
-        return false;
-    }
 }

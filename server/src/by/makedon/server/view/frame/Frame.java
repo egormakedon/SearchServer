@@ -1,6 +1,6 @@
 package by.makedon.server.view.frame;
 
-import by.makedon.server.searchserver.SearchServer;
+import by.makedon.server.searchserver.SearchServerState;
 import by.makedon.server.view.button.RunButton;
 import by.makedon.server.view.button.StopButton;
 
@@ -11,7 +11,7 @@ public class Frame {
     private JFrame frame;
     private RunButton runButton;
     private StopButton stopButton;
-    private SearchServer searchServer;
+    private SearchServerState searchServerState;
 
     {
         runButton = new RunButton("Run");
@@ -23,8 +23,8 @@ public class Frame {
         stopButton.setSize(W, H);
     }
 
-    public Frame(SearchServer searchServer) {
-        this.searchServer = searchServer;
+    public Frame(SearchServerState searchServerState) {
+        this.searchServerState = searchServerState;
         frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
@@ -54,8 +54,8 @@ public class Frame {
     }
 
     private void setSearchServerToButton() {
-        runButton.setSearchServer(searchServer);
-        stopButton.setSearchServer(searchServer);
+        runButton.setSearchServerState(searchServerState);
+        stopButton.setSearchServerState(searchServerState);
     }
 
     private void setListenerToButton() {

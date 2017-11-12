@@ -1,5 +1,6 @@
 package by.makedon.server.searchserver;
 
+import by.makedon.server.database.BookOfReferenceDB;
 import by.makedon.server.exception.ServerException;
 import by.makedon.server.controller.SocketProcessor;
 import by.makedon.server.socket.SocketStore;
@@ -11,102 +12,89 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.concurrent.TimeUnit;
 
 public class SearchServer implements Runnable {
     private final int PORT;
     private ServerSocket ss;
-    private boolean isServerRun;
     private SocketStore socketStore;
+    private BookOfReferenceDB db;
+    private ClearSocketStoreTimer timer;
     static Logger logger = LogManager.getLogger(SearchServer.class);
 
-    public SearchServer() {
-        PORT = 9000;
+    SearchServer() {
+        PORT = 7777;
         socketStore = SocketStore.getInstance();
+        db = new BookOfReferenceDB();
     }
 
-//    class ClearSocketStoreTimer extends TimerTask {
-//        @Override
-//        public void run() {
-//            SocketStoreManager socketStoreManager = new SocketStoreManager();
-//            socketStoreManager.clearStore(socketStore);
-//        }
-//    }
+    class ClearSocketStoreTimer extends Thread {
+        @Override
+        public void run() {
+            while(true) {
+                try {
+                    TimeUnit.MINUTES.sleep(1);
+                    clearSocketStore();
+                } catch (InterruptedException e) {
+                    logger.log(Level.WARN, "ClearSocketStoreTimer interrupted");
+                    break;
+                }
+            }
+        }
+    }
 
     @Override
     public void run() {
-        if (isServerRun) {
-            logger.log(Level.INFO,"SearchServer has already run");
-            return;
-        }
-
-        isServerRun = true;
-        logger.log(Level.INFO, "SearchServer was ran");
-
-//        final long DELAY = 60_000;
-//        Timer timer = new Timer();
-//        timer.schedule(new ClearSocketStoreTimer(), DELAY);
+        timer = new ClearSocketStoreTimer();
+        timer.start();
 
         try {
             ss = new ServerSocket(PORT);
-            logger.log(Level.INFO, "ServerSocket was created");
+            logger.log(Level.INFO, "ServerSocket has opened");
         } catch (IOException e) {
-            logger.log(Level.ERROR,"ServerSocket io exception", e);
-            isServerRun = false;
-            return;
+            logger.log(Level.ERROR, e);
+            throw new RuntimeException();
         }
 
-        try {
-            while (isServerRun) {
-                try {
-                    Socket socket = ss.accept();
-                    logger.log(Level.INFO, "ClientSocket " + socket.getInetAddress() + " " + socket.getPort() + " was connected");
-                    socketStore.addSocket(socket);
-                    new Thread(new SocketProcessor(socket)).start();
-                } catch (IOException e) {
-                    logger.log(Level.WARN, e);
+        while (true) {
+            try {
+                Socket socket = ss.accept();
+                logger.log(Level.INFO, "Socket " + socket.getInetAddress() + " " + socket.getPort() + " has connected");
+                socketStore.addSocket(socket);
+                SocketProcessor socketProcessor = new SocketProcessor(socket, db);
+                new Thread(socketProcessor).start();
+            } catch (IOException e) {
+                if (ss.isClosed()) {
+                    break;
+                } else {
+                    logger.log(Level.ERROR, e);
                 }
             }
-        } finally {
-            try {
-                clearSocketStore();
-            } catch (ServerException e) {
-                logger.log(Level.ERROR, e);
-            }
-            try {
-                closeServerSocket();
-            } catch (ServerException e) {
-                logger.log(Level.ERROR, e);
-            }
         }
     }
 
-    public void stopServer() {
-        if (isServerRun) {
-            isServerRun = false;
-            logger.log(Level.INFO, "SearchServer was stopped");
-        } else {
-            logger.log(Level.INFO,"SearchServer has already stopped");
-        }
-    }
-
-    private void clearSocketStore() throws ServerException {
+    void closeAllSockets() throws ServerException {
         SocketStoreManager socketStoreManager = new SocketStoreManager();
-        socketStoreManager.closeSockets(socketStore);
-        logger.log(Level.INFO, "All ClientSockets was closed");
-        socketStoreManager.clearStore(socketStore);
-        logger.log(Level.INFO, "SocketStore was cleared");
+        socketStoreManager.closeAllSockets(socketStore);
     }
 
-    private void closeServerSocket() throws ServerException {
-        try {
-            if (!ss.isClosed()) {
+    void clearSocketStore() {
+        SocketStoreManager socketStoreManager = new SocketStoreManager();
+        socketStoreManager.clearStore(socketStore);
+    }
+
+    void closeServerSocket() throws ServerException {
+        if (ss != null) {
+            try {
                 ss.close();
-                logger.log(Level.INFO, "ServerSocket was closed");
+                logger.log(Level.INFO, "ServerSocket has closed");
+            } catch(IOException e) {
+                throw new ServerException("ServerSocketException", e);
             }
-        } catch (IOException e) {
-            throw new ServerException("ServerSocket io exception", e);
         }
+    }
+
+    void stopTimer() {
+        timer.interrupt();
     }
 }
