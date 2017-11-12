@@ -6,8 +6,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.*;
+import java.net.InetAddress;
 import java.net.Socket;
-import java.net.SocketException;
 
 public class ClientSocket {
     private Socket clientSocket;
@@ -17,7 +17,8 @@ public class ClientSocket {
 
     public boolean createClientSocket(String ip, int port) throws WrongConnectionException {
         try {
-            clientSocket = new Socket(ip, port);
+            InetAddress inetAddress = InetAddress.getByName(ip);
+            clientSocket = new Socket(inetAddress, port);
             OutputStream os = clientSocket.getOutputStream();
             InputStream is = clientSocket.getInputStream();
             objos = new ObjectOutputStream(os);

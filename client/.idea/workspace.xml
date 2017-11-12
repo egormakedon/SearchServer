@@ -23,19 +23,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ClientSocketProcessor.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/by/makedon/client/controller/ClientSocketProcessor.java">
+      <file leaf-file-name="ClientSocket.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/by/makedon/client/socket/ClientSocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="342">
+              <caret line="19" column="64" lean-forward="true" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#ClientSocketProcessor#0;class#ClientSocketProcessor#0" expanded="false" />
-                <element signature="method#connectionState#0;class#ClientSocketProcessor#0" expanded="false" />
-                <element signature="method#closeClientSocket#0;class#ClientSocketProcessor#0" expanded="false" />
-                <element signature="method#createClientSocket#0;class#ClientSocketProcessor#0" expanded="false" />
-                <element signature="method#getConnectionInfo#0;class#ClientSocketProcessor#0" expanded="false" />
-                <element signature="e#1840#1848#0" expanded="true" />
+                <element signature="method#closeClientSocket#0;class#ClientSocket#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -112,8 +107,8 @@
         <option value="$PROJECT_DIR$/src/by/makedon/client/view/dialog/CheckDialog.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/client/view/dialog/SessionDialog.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/client/controller/ClientController.java" />
-        <option value="$PROJECT_DIR$/src/by/makedon/client/socket/ClientSocket.java" />
         <option value="$PROJECT_DIR$/src/by/makedon/client/controller/ClientSocketProcessor.java" />
+        <option value="$PROJECT_DIR$/src/by/makedon/client/socket/ClientSocket.java" />
       </list>
     </option>
   </component>
@@ -144,6 +139,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,16 +166,12 @@
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="socket" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -189,7 +184,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="timer&#9;PSI&#9;JAVA://by.makedon.client.controller.ClientSocketProcessor.ServerClosedTimer" />
+    <property name="SearchEverywhereHistoryKey" value="ServerSocket&#9;PSI&#9;JAVA://java.net.ServerSocket&#10;timer&#9;PSI&#9;JAVA://by.makedon.client.controller.ClientSocketProcessor.ServerClosedTimer" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -354,12 +349,13 @@
       <workItem from="1510174104953" duration="3219000" />
       <workItem from="1510240810883" duration="3262000" />
       <workItem from="1510409667892" duration="16658000" />
-      <workItem from="1510443574695" duration="6111000" />
+      <workItem from="1510443574695" duration="6370000" />
+      <workItem from="1510482516393" duration="2370000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217433000" />
+    <option name="totallyTimeSpent" value="220062000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -382,9 +378,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19273128" sideWeight="0.50213444" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.49786553" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.49786553" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14354323" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
@@ -447,7 +443,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resource/log4j.xml" />
     <entry file="file://$PROJECT_DIR$/src/clientModel/ServerData.java" />
     <entry file="file://$PROJECT_DIR$/src/clientModel/Client.java" />
     <entry file="file://$PROJECT_DIR$/src/clientController/Controller.java" />
@@ -456,13 +451,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/net/Socket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="242" column="11" lean-forward="false" selection-start-line="242" selection-start-column="11" selection-end-line="242" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -644,9 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="802">
           <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -710,7 +695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1">
           <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -718,24 +702,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="539">
           <caret line="47" column="41" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log/log.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/log/log.log" />
     <entry file="file://$PROJECT_DIR$/src/by/makedon/client/view/dialog/CheckDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-350">
           <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -770,23 +744,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/makedon/client/socket/ClientSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding>
-            <element signature="method#createClientSocket#0;class#ClientSocket#0" expanded="false" />
-            <element signature="method#closeClientSocket#0;class#ClientSocket#0" expanded="false" />
-            <element signature="e#1976#1977#0" expanded="false" />
-            <element signature="e#2004#2005#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/makedon/client/controller/ClientSocketProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ClientSocketProcessor#0;class#ClientSocketProcessor#0" expanded="false" />
@@ -794,7 +755,33 @@
             <element signature="method#closeClientSocket#0;class#ClientSocketProcessor#0" expanded="false" />
             <element signature="method#createClientSocket#0;class#ClientSocketProcessor#0" expanded="false" />
             <element signature="method#getConnectionInfo#0;class#ClientSocketProcessor#0" expanded="false" />
-            <element signature="e#1840#1848#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/net/ServerSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5274">
+          <caret line="43" column="2" lean-forward="true" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/net/Socket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="48" column="28" lean-forward="true" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/makedon/client/socket/ClientSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="64" lean-forward="true" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#closeClientSocket#0;class#ClientSocket#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -1,0 +1,18 @@
+2017-11-12 13:02:52.757 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ServerSocket has opened
+2017-11-12 13:02:52.757 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServerState - SearchServer has started
+2017-11-12 13:09:17.455 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServerState - SearchServer has started
+2017-11-12 13:09:17.455 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ServerSocket has opened
+2017-11-12 13:09:56.504 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - Socket /192.168.100.4 2282 has connected
+2017-11-12 13:10:53.580 [Thread-3] WARN  by.makedon.server.controller.SocketProcessor - java.net.SocketException: Connection reset
+2017-11-12 13:10:53.582 [Thread-3] INFO  by.makedon.server.controller.SocketProcessor - Socket /192.168.100.4 2282 has closed
+2017-11-12 13:50:43.616 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - ServerSocket has opened
+2017-11-12 13:50:43.615 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServerState - SearchServer has started
+2017-11-12 13:50:52.249 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - Socket /127.0.0.1 49556 has connected
+2017-11-12 13:51:01.782 [Thread-3] WARN  by.makedon.server.controller.SocketProcessor - java.io.EOFException
+2017-11-12 13:51:01.785 [Thread-3] INFO  by.makedon.server.controller.SocketProcessor - Socket /127.0.0.1 49556 has closed
+2017-11-12 13:51:10.380 [Thread-1] INFO  by.makedon.server.searchserver.SearchServer - Socket /192.168.100.8 55186 has connected
+2017-11-12 13:54:55.780 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServer - ServerSocket has closed
+2017-11-12 13:54:55.780 [AWT-EventQueue-0] INFO  by.makedon.server.searchserver.SearchServerState - SearchServer has stoped
+2017-11-12 13:54:55.780 [Thread-2] WARN  by.makedon.server.searchserver.SearchServer - ClearSocketStoreTimer interrupted
+2017-11-12 13:54:55.780 [Thread-4] WARN  by.makedon.server.controller.SocketProcessor - java.net.SocketException: Socket closed
+2017-11-12 13:54:55.781 [Thread-4] INFO  by.makedon.server.controller.SocketProcessor - Socket /192.168.100.8 55186 has closed
